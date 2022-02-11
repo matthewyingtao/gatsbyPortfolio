@@ -1,0 +1,23 @@
+.pageWrapper {
+  padding-inline: var(--gutter);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr min(var(--max-content-width), 100%) 1fr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.main {
+  grid-column: 1 / 4;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr min(var(--max-content-width), 100%) 1fr;
+}
+
+.main > * {
+  grid-column: 2;
+}

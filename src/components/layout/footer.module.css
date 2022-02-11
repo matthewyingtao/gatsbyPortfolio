@@ -1,0 +1,6 @@
+.footer {
+  display: flex;
+  grid-column: 2;
+  padding-block: var(--space-2xl);
+  font-size: var(--text-500);
+}

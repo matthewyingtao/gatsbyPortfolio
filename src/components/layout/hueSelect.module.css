@@ -1,0 +1,46 @@
+.dropdownWrapper {
+  position: relative;
+  display: flex;
+}
+
+.openbutton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.openbutton svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0.25rem 0.1rem 0.25rem 0.25rem;
+}
+
+.picker {
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0;
+  display: flex;
+  opacity: 0;
+}
+
+.open {
+  animation: fade-left 250ms ease-out forwards;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

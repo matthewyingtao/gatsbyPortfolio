@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 2;
+  padding-block: var(--space-2xl);
+  font-size: var(--text-500);
+}
+
+.logo {
+  position: relative;
+  text-decoration: none;
+  padding-left: var(--space-lg);
+  transition: color 250ms ease-in-out, transform 50ms ease-in-out;
+}
+
+.logo:hover {
+  color: var(--primary);
+}
+
+.logo:active {
+  transform: translateY(var(--space-sm));
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--space-sm);
+  height: 100%;
+  background: var(--primary);
+  transition: transform 250ms ease-in-out;
+}
+
+.logo:hover::before {
+  transform: translateX(var(--space-sm));
+}
