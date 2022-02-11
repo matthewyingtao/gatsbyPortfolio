@@ -29,7 +29,7 @@
   width: var(--space-sm);
   height: 100%;
   background: var(--primary);
-  transition: transform 250ms ease-in-out;
+  transition: transform 100ms ease-in-out;
 }
 
 .logo:hover::before {
