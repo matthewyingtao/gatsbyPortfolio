@@ -1,5 +1,6 @@
 .pageWrapper {
   padding-inline: var(--gutter);
+  height: 100%;
 }
 
 .contentGrid {
