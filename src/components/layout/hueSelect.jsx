@@ -50,7 +50,15 @@ export function HueSelect() {
   )
 
   React.useEffect(() => {
+    const storedHue = localStorage.getItem("hue", hue)
+    if (storedHue !== null) {
+      setHue(storedHue)
+    }
+  }, [])
+
+  React.useEffect(() => {
     document.documentElement.style.setProperty("--hue", hue)
+    localStorage.setItem("hue", hue)
   }, [hue])
 
   return (
