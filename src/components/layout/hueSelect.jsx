@@ -5,13 +5,49 @@ import {
   openbutton,
   picker,
   open as openstyle,
+  colorButton as colorButtonStyle,
 } from "./hueSelect.module.css"
 
-const defaultHue = "213"
-
 export function HueSelect() {
+  const defaultHue = 213
+
+  const colors = [
+    {
+      name: "Blue (default)",
+      hue: 213,
+    },
+    {
+      name: "Green",
+      hue: 150,
+    },
+    {
+      name: "Purple",
+      hue: 256,
+    },
+    {
+      name: "Magenta",
+      hue: 330,
+    },
+    {
+      name: "Red",
+      hue: 0,
+    },
+  ]
+
   const [hue, setHue] = React.useState(defaultHue)
   const [open, setOpen] = React.useState(false)
+
+  const ColorButton = ({ name, hue, i }) => (
+    <button
+      className={colorButtonStyle}
+      style={{ "--btnHue": hue, "--idx": i }}
+      onClick={() => {
+        setOpen(false)
+        setHue(hue)
+      }}
+      aria-label={name}
+    />
+  )
 
   React.useEffect(() => {
     document.documentElement.style.setProperty("--hue", hue)
@@ -27,20 +63,9 @@ export function HueSelect() {
         <IoMdColorPalette style={{ fill: "var(--white)" }} />
       </button>
       <div className={[picker, open ? openstyle : ""].join(" ")}>
-        <label className="visually-hidden" htmlFor="hue">
-          Color Selector
-        </label>
-        <input
-          type="range"
-          id="hue"
-          name="hue"
-          min="0"
-          max="360"
-          value={hue}
-          onChange={e => {
-            setHue(e.target.value)
-          }}
-        />
+        {colors.map(({ name, hue: colorHue }, i) => (
+          <ColorButton key={name} hue={colorHue} name={name} i={i} />
+        ))}
       </div>
     </div>
   )

@@ -24,23 +24,41 @@
 
 .picker {
   position: absolute;
-  bottom: -1.5rem;
+  top: calc(100% + 1rem);
   right: 0;
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   opacity: 0;
 }
 
 .open {
-  animation: fade-left 250ms ease-out forwards;
+  opacity: 1;
 }
 
-@keyframes fade-left {
+.colorButton {
+  height: 1.5em;
+  width: 1.5em;
+  background: hsl(var(--btnHue, 213), 90%, 70%);
+  opacity: 0;
+}
+
+.open .colorButton {
+  animation: fade-down 200ms ease-in calc(var(--idx, 0) * 40ms) forwards;
+}
+
+.colorButton:active {
+  box-shadow: inset -0.25rem -0.25rem 0.5rem hsl(var(--btnHue), 55%, 40%),
+    inset 0.25rem 0.25rem 0.5rem hsl(var(--btnHue), 55%, 60%);
+}
+
+@keyframes fade-down {
   from {
     opacity: 0;
-    transform: translateX(0.5rem);
+    transform: translateY(-0.25rem);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
