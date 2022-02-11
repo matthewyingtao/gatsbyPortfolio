@@ -13,12 +13,12 @@ export function HueSelect() {
 
   const colors = [
     {
-      name: "Blue (default)",
-      hue: 213,
-    },
-    {
       name: "Green",
       hue: 150,
+    },
+    {
+      name: "Blue (default)",
+      hue: 213,
     },
     {
       name: "Purple",
