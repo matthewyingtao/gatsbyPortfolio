@@ -21,6 +21,8 @@ module.exports = {
               maxWidth: 1080,
               withWebp: true,
               wrapperStyle: `width: 100%; margin: var(--space-xl) auto;`,
+              showCaptions: true,
+              quality: 75,
             },
           },
           `gatsby-remark-prismjs`,

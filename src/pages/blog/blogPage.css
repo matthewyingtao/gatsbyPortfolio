@@ -1,6 +1,17 @@
 /* images */
-.wrapper .gatsby-resp-image-wrapper {
+.gatsby-resp-image-wrapper {
   box-shadow: var(--shadow-neu-md);
+  border: var(--primary) 1px solid;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.gatsby-resp-image-figcaption {
+  font-style: italic;
+  margin-top: var(--space-lg);
+  position: relative;
+  font-size: var(--text-300);
+  text-align: center;
 }
 
 /* prism styles */
@@ -11,7 +22,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: var(--text-300);
-  color: #abb2bf;
+  color: hsl(var(--hue), 15%, 80%);
   background: none;
   text-align: left;
   white-space: pre-wrap;
@@ -33,26 +44,25 @@ pre[class*="language-"] {
   padding: 1.25rem;
   margin: 0.5em 0;
   overflow: auto;
+  border: var(--primary) 1px solid;
+  border-radius: var(--radius-sm);
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: var(--black);
-  border-radius: var(--radius-sm);
 }
 pre[class*="language-"] {
   box-shadow: var(--shadow-neu-md);
 }
 
-code[class="language-text"] {
-  box-shadow: var(--shadow-neu-sm);
-}
-
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: var(--radius-sm);
+  padding: 0.125rem 0.5rem;
   white-space: normal;
+  border-bottom: var(--primary-300) 1px solid;
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: var(--radius-sm);
 }
 
 .token.comment,
