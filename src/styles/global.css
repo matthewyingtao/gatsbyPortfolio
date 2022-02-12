@@ -66,6 +66,8 @@
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
 
+  --curve-bounce: cubic-bezier(0.5, -0.85, 0.28, 1.57);
+
   --gutter: var(--space-lg);
 
   --shadow-neu-sm: 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 17%),
