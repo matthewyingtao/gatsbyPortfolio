@@ -8,7 +8,9 @@ export default function Home({ data: { posts } }) {
     <>
       <Seo />
 
-      <h1>Blog.</h1>
+      <h1>
+        Blog<em>.</em>
+      </h1>
       <BlogPostList posts={posts.edges.map(({ node }) => node)} />
     </>
   )

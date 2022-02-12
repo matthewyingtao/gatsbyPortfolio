@@ -34,7 +34,6 @@
     var(--primary-300)
   );
 
-  --bg: var(--dark);
   --text: var(--white);
 
   /*--------
@@ -88,13 +87,33 @@
     inset 0.5rem 0.5rem 1rem hsl(var(--hue), 55%, 35%);
 }
 
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient-ttb);
+  background-position-x: 0%;
+  background-size: 200%;
+  border-radius: 999px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-position-x: 100%;
+}
+
 ::selection {
   background: var(--primary);
   color: var(--black);
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--dark);
   color: var(--text);
   font-family: var(--sans);
   font-size: var(--text-400);
@@ -185,7 +204,11 @@ button:active {
   }
 }
 
-/* accessibility utility */
+/*-----
+utility 
+-----*/
+
+/* accessibility */
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -197,22 +220,17 @@ button:active {
   width: 1px;
 }
 
-/* scrollbar */
-body::-webkit-scrollbar {
-  width: 1rem;
+mark {
+  background: var(--primary-gradient-ltr);
+  color: var(--black);
+  padding: 0.125rem 0.25rem;
 }
 
-body::-webkit-scrollbar-track {
-  background: var(--dark);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--primary-gradient-ttb);
-  background-position-x: 0%;
+em {
+  font-style: inherit;
+  color: transparent;
+  background-image: var(--primary-gradient-ltr);
   background-size: 200%;
-  border-radius: 999px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background-position-x: 100%;
+  background-position: 0%;
+  background-clip: text;
 }

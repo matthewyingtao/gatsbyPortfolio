@@ -27,4 +27,6 @@
 .divider svg {
   width: var(--space-xl);
   height: var(--space-xl);
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem hsl(var(--hue), 55%, 17%))
+    drop-shadow(-0.25rem -0.25rem 0.25rem hsl(var(--hue), 55%, 33%));
 }
