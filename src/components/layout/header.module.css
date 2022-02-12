@@ -10,11 +10,15 @@
   position: relative;
   text-decoration: none;
   padding-left: var(--space-lg);
-  transition: color 250ms ease-in-out, transform 50ms ease-in-out;
+  transition: color 150ms ease-in-out, transform 50ms ease-in-out;
+  background-image: var(--primary-gradient-ltr);
+  background-size: 200%;
+  background-position: 0%;
+  background-clip: text;
 }
 
 .logo:hover {
-  color: var(--primary);
+  color: hsla(var(--hue), 90%, 70%, 0);
 }
 
 .logo:active {
@@ -28,7 +32,7 @@
   left: 0;
   width: var(--space-sm);
   height: 100%;
-  background: var(--primary);
+  background: var(--primary-gradient-ltr);
   transition: transform 100ms ease-in-out;
 }
 

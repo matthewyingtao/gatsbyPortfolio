@@ -22,11 +22,18 @@
   --space-3xl: 8rem;
 
   --primary: var(--primary-400);
-  --primary-button-bg: linear-gradient(
+
+  --primary-gradient-ltr: linear-gradient(
     to right,
-    var(--primary-300),
-    var(--primary-400)
+    var(--primary-400),
+    var(--primary-300)
   );
+  --primary-gradient-ttb: linear-gradient(
+    to bottom,
+    var(--primary-400),
+    var(--primary-300)
+  );
+
   --bg: var(--dark);
   --text: var(--white);
 
@@ -76,6 +83,9 @@
 
   --shadow-button: inset -0.25rem -0.25rem 0.5rem hsl(var(--hue), 55%, 40%),
     inset 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 60%);
+
+  --shadow-button-lg: inset -0.5rem -0.5rem 1rem hsl(var(--hue), 55%, 40%),
+    inset 0.5rem 0.5rem 1rem hsl(var(--hue), 55%, 35%);
 }
 
 ::selection {
@@ -151,7 +161,7 @@ aside {
 
 button {
   cursor: pointer;
-  background: var(--primary-button-bg);
+  background: var(--primary-gradient-ltr);
   background-position-x: 0%;
   background-size: 200%;
   border: none;
@@ -197,7 +207,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--primary-button-bg);
+  background: var(--primary-gradient-ttb);
   background-position-x: 0%;
   background-size: 200%;
   border-radius: 999px;
