@@ -6,6 +6,7 @@
 
 .divider {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding-top: var(--space-xl);
