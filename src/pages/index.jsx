@@ -6,7 +6,6 @@ export default function Home({ data: { posts } }) {
   return (
     <>
       <Seo />
-      <h1>Hello, world!</h1>
       {posts.edges.map(({ node: { id, frontmatter } }) => {
         return (
           <div key={id}>

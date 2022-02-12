@@ -1,6 +1,19 @@
 .footer {
-  display: flex;
   grid-column: 2;
   padding-block: var(--space-2xl);
-  font-size: var(--text-500);
+  font-size: var(--text-400);
+}
+
+.divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border-top: 1px solid var(--primary-400);
+}
+
+.divider svg {
+  width: var(--space-xl);
+  height: var(--space-xl);
 }
