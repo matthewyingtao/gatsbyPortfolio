@@ -1,22 +1,15 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
+import { BlogPostList } from "../components/blogPostList"
 import Seo from "../components/layout/seo"
 
 export default function Home({ data: { posts } }) {
   return (
     <>
       <Seo />
-      {posts.edges.map(({ node: { id, frontmatter } }) => {
-        return (
-          <div key={id}>
-            <Link to={`/blog/${frontmatter.slug}`}>
-              <h2>{frontmatter.title}</h2>
-            </Link>
-            <p>{frontmatter.date}</p>
-            <p>{frontmatter.description}</p>
-          </div>
-        )
-      })}
+
+      <h1>Blog.</h1>
+      <BlogPostList posts={posts.edges.map(({ node }) => node)} />
     </>
   )
 }
