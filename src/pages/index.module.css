@@ -1,0 +1,32 @@
+.viewAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  margin-left: auto;
+}
+
+.viewAll svg {
+  transition: transform 150ms var(--curve-bounce);
+}
+
+.viewAll:hover svg {
+  transform: translateX(var(--space-sm));
+}
+
+.writing path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 150ms cubic-bezier(0.4, 0, 1, 1) calc(var(--idx, 0) * 150ms)
+    forwards;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
