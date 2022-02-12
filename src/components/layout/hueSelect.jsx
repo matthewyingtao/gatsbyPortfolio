@@ -54,6 +54,7 @@ export function HueSelect() {
     if (storedHue !== null) {
       setHue(storedHue)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   React.useEffect(() => {
