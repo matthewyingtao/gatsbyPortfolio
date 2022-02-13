@@ -109,6 +109,7 @@ export default function Home({ data: { posts } }) {
             placeholder="blurred"
             alt="portait of me!"
             src="../assets/portrait.jpg"
+            loading="eager"
           />
           <IntroSVG className={pointer} />
         </div>
