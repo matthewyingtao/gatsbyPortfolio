@@ -1,0 +1,24 @@
+.skip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin: auto;
+  background-color: var(--primary);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  clip: rect(1px, 1px, 1px, 1px);
+  color: var(--dark);
+  font-size: var(--text-300);
+  overflow: hidden;
+  padding: var(--space-lg);
+  transform: translateY(-100%);
+  transition: transform 250ms ease-out;
+}
+
+.skip:focus {
+  clip: auto;
+  z-index: 20;
+  transform: translateY(0);
+}

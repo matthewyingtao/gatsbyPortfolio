@@ -1,11 +1,22 @@
-import { graphql, Link } from "gatsby"
 import React from "react"
+import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { IoIosArrowForward } from "react-icons/io"
+
 import { BlogPostList } from "../components/blogPostList"
 import Seo from "../components/layout/seo"
-import { IoIosArrowRoundForward } from "react-icons/io"
-import { viewAll, writing } from "./index.module.css"
+import {
+  intro,
+  portraitWrapper,
+  portrait,
+  pointer,
+  blurb,
+  focus,
+  writing,
+} from "./index.module.css"
+import { ArrowLink } from "../components/arrowLink"
 
-function Intro() {
+function IntroSVG({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,9 +24,13 @@ function Intro() {
       height="144"
       fill="none"
       viewBox="0 0 273 144"
+      {...props}
     >
       <g stroke="var(--white)" strokeLinecap="round" strokeWidth="3">
-        <path d="M3.254 31.972C11.104 23.61 19.718 15.986 27.41 7.48c.517-.572 5.242-7.837 5.801-5.28 1.594 7.286 7.029 12.589 12.431 17.404 2.956 2.635 6.05 5.115 9.147 7.581 1.33 1.06 2.847 2.804 4.42 3.53 1.13.522-2.47-.43-3.714-.4-6.256.157-12.465 1.545-18.723 1.904-2.966.17-34.74-.288-34.623-1.35.32-2.887 6.401-4.79 8.38-5.863 6-3.256 11.971-6.568 18.262-9.239 1.495-.635 3.4-1.67 1.259.338-2.52 2.362-5.74 3.93-8.502 5.985-3.282 2.442-6.337 5.192-9.515 7.766-4.159 3.366-2.326 2.344.736.214 5.7-3.962 12.193-8.377 18.846-10.558.892-.293.912-.215.062.184a47.375 47.375 0 00-7.213 4.205c-5.167 3.652-.493 3.603 3.008 2.455 2.36-.774 4.707-1.634 6.967-2.67 1.437-.659 4.906-3.223 4.42-1.719-.64 1.98-7.608 5.96-1.228 4.42 3.412-.823 7.15-2.603 10.681-2.7 1.478-.042-1.354 2.51 1.167 1.963.53-.114 5.922-1.597 5.371-.276-.606 1.455-3.236 2.232-4.45 2.855-3.85 1.975-9.875 4.976-14.365 3.928-1.876-.437-3.862-2.41-5.709-3.192-.96-.406-3.008-.859-3.008-.859s.674.246.491.307c-.314.105-.147.588-.123.798.148 1.292-.45 2.174-.982 3.315-2.26 4.854-2.7 9.133-1.228 14.303 5.178 18.18 23.074 24.532 39.288 30.663 6.997 2.646 13.739 4.066 21.24 3.53 1.389-.1 12.354-.982 6.2-.982"></path>
+        <path
+          style={{ transform: "rotate(15deg) translateX(20px)" }}
+          d="M3.254 31.972C11.104 23.61 19.718 15.986 27.41 7.48c.517-.572 5.242-7.837 5.801-5.28 1.594 7.286 7.029 12.589 12.431 17.404 2.956 2.635 6.05 5.115 9.147 7.581 1.33 1.06 2.847 2.804 4.42 3.53 1.13.522-2.47-.43-3.714-.4-6.256.157-12.465 1.545-18.723 1.904-2.966.17-34.74-.288-34.623-1.35.32-2.887 6.401-4.79 8.38-5.863 6-3.256 11.971-6.568 18.262-9.239 1.495-.635 3.4-1.67 1.259.338-2.52 2.362-5.74 3.93-8.502 5.985-3.282 2.442-6.337 5.192-9.515 7.766-4.159 3.366-2.326 2.344.736.214 5.7-3.962 12.193-8.377 18.846-10.558.892-.293.912-.215.062.184a47.375 47.375 0 00-7.213 4.205c-5.167 3.652-.493 3.603 3.008 2.455 2.36-.774 4.707-1.634 6.967-2.67 1.437-.659 4.906-3.223 4.42-1.719-.64 1.98-7.608 5.96-1.228 4.42 3.412-.823 7.15-2.603 10.681-2.7 1.478-.042-1.354 2.51 1.167 1.963.53-.114 5.922-1.597 5.371-.276-.606 1.455-3.236 2.232-4.45 2.855-3.85 1.975-9.875 4.976-14.365 3.928-1.876-.437-3.862-2.41-5.709-3.192-.96-.406-3.008-.859-3.008-.859s.674.246.491.307c-.314.105-.147.588-.123.798.148 1.292-.45 2.174-.982 3.315-2.26 4.854-2.7 9.133-1.228 14.303 5.178 18.18 23.074 24.532 39.288 30.663 6.997 2.646 13.739 4.066 21.24 3.53 1.389-.1 12.354-.982 6.2-.982"
+        ></path>
         <g className={writing}>
           <path
             pathLength="0.9"
@@ -87,14 +102,49 @@ export default function Home({ data: { posts } }) {
   return (
     <>
       <Seo />
-      <Intro />
-      <h1>
-        Blog<em>.</em>
-      </h1>
-      <BlogPostList posts={posts.edges.map(({ node }) => node)} />
-      <Link to="/blog" className={viewAll}>
-        View all <IoIosArrowRoundForward size={32} />
-      </Link>
+      <div className={intro}>
+        <div className={portraitWrapper}>
+          <StaticImage
+            className={portrait}
+            placeholder="blurred"
+            alt="portait of me!"
+            src="../assets/portrait.jpg"
+          />
+          <IntroSVG className={pointer} />
+        </div>
+        <div className={blurb}>
+          <h1 style={{ lineHeight: 0.7 }}>Hi!</h1>
+          <h2 style={{ marginBottom: "0.25rem" }}>
+            I'm an Auckland-based <em>front-end</em> developer
+          </h2>
+          <p className={focus}>who focuses on</p>
+          <ul style={{ marginTop: "-0.5rem" }}>
+            <li>
+              <IoIosArrowForward />
+              <span>Design</span>
+            </li>
+            <li>
+              <IoIosArrowForward />
+              <span>Communication</span>
+            </li>
+            <li>
+              <IoIosArrowForward />
+              <span>
+                Making the web a little bit <em>spicier!</em>
+              </span>
+            </li>
+          </ul>
+          <ArrowLink to={"/about"} text={"More about me"} />
+          <ArrowLink to={"/contact"} text={"Get in touch"} />
+        </div>
+      </div>
+      <section>
+        <h1>
+          Blog<em>.</em>
+        </h1>
+        <BlogPostList posts={posts.edges.map(({ node }) => node)} />
+        <ArrowLink to={"/blog"} text={"View all"} />
+      </section>
     </>
   )
 }

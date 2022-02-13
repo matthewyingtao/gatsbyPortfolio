@@ -4,7 +4,7 @@ import { BlogPostCard } from "./blogPostCard"
 
 export function BlogPostList({ posts }) {
   return (
-    <ul className={list}>
+    <div className={list}>
       {posts.map(({ id, frontmatter: { title, date, description, slug } }) => (
         <BlogPostCard
           key={id}
@@ -14,6 +14,6 @@ export function BlogPostList({ posts }) {
           slug={slug}
         />
       ))}
-    </ul>
+    </div>
   )
 }

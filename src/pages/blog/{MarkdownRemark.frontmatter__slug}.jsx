@@ -5,14 +5,22 @@ import "./blogPage.css"
 
 export default function Home({ data }) {
   const {
-    markdownRemark: { frontmatter, html },
+    markdownRemark: {
+      frontmatter: { title, date, description },
+      html,
+      tableOfContents,
+    },
   } = data
 
   return (
     <>
-      <Seo />
-      <h1 className="blogTitle">{frontmatter.title}</h1>
+      <Seo title={title} description={description} />
+      <h1 className="blogTitle">{title}</h1>
       <article className="blogContent">
+        <div className="tableOfContents">
+          <h2>Table of Contents</h2>
+          <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+        </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </>
@@ -22,11 +30,11 @@ export default function Home({ data }) {
 export const query = graphql`
   query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      tableOfContents
       html
       frontmatter {
         date
         description
-        slug
         title
       }
     }

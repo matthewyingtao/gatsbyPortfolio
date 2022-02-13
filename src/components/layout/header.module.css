@@ -1,8 +1,14 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--space-md);
   grid-column: 2;
   padding-block: var(--space-2xl);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
   font-size: var(--text-500);
 }
 
@@ -31,6 +37,7 @@
   top: 0;
   left: 0;
   width: var(--space-sm);
+  border-radius: 999px;
   height: 100%;
   background: var(--primary-gradient-ltr);
   transition: transform 100ms ease-in-out;
@@ -38,4 +45,14 @@
 
 .logo:hover::before {
   transform: translateX(var(--space-sm));
+}
+
+.links {
+  display: flex;
+  gap: var(--space-md);
+  margin-left: var(--space-lg);
+}
+
+.links a {
+  text-decoration: none;
 }

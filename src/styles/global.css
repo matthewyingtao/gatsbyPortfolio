@@ -67,6 +67,7 @@
   --radius-md: 1rem;
 
   --curve-bounce: cubic-bezier(0.5, -0.85, 0.28, 1.57);
+  --curve-bounce-big: cubic-bezier(0.79, -1.51, 0.18, 2.28);
 
   --gutter: var(--space-lg);
 
@@ -153,6 +154,11 @@ p + :is(h1, h2, h3, h4, h5, h6, p) {
 
 a {
   color: var(--text);
+  transition: color 150ms ease-out;
+}
+
+a:hover {
+  color: var(--primary);
 }
 
 ul,

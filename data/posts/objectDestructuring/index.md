@@ -5,9 +5,9 @@ date: "09/02/2022"
 description: "Practical examples of how to use object destructuring in JavaScript."
 ---
 
-## Introduction — what is object destructuring?
+## What is object destructuring?
 
-At it’s core, object destructuring is a syntax that allows you to extract values from an object and assign them to variable names.
+In short, object destructuring is a syntax that allows you to extract values from an object and assign them to variable names.
 
 ```jsx
 const favoriteFruit = {
@@ -57,7 +57,6 @@ Here’s an example of how that would be accomplished without object destructuri
 
 ```jsx
 function getStock({ id, variation }) {
-  console.log(id) // 1234
   // make a fetch request to some API using the id and variation
 
   return stock
@@ -66,11 +65,11 @@ function getStock({ id, variation }) {
 getStock(item)
 ```
 
-What this does is take the `item` object we’ve passed in, finds the `id` and `variation` properties on it and finally assigns them to variables named `id` and `variation`.
+What this does is take the `item` object we’ve passed in, finds the `id` and `variation` properties on it and assigns the values to the two variables.
 
-We can immediately see a few benefits:
+There are a few benefits to this approach:
 
-1. The properties used in the function are made obvious.
+1. **The properties used in the function are made obvious.** Looking at the function, you can see that it only uses the `id` and `variation` properties.
 2. Primitive properties are copied when you use destructuring, which helps to prevent side effects.
 3. VSCode (and probably other code editors) autocompletion can help you when calling the function.
 
@@ -82,7 +81,7 @@ Number two might be a little confusing to newer programmers and those unfamillia
 You may be confused as to why these aren’t objects, as you can call a method such as the `.toString()` method on a number. This is because under the hood, JavaScript wraps the primitive, converting it to an object, calls the method and finally destroys the wrapper.
 </aside>
 
-Another term that may be unfamilliar is side effects. A function with side effects is one that uses or changes a variable outside it’s scope. Or put simply, what you pass as the function’s arguments is all it should interact with. So what does that look like in practice?
+Another term that may be unfamilliar is side effects. A function with side effects is one that uses or changes a variable outside it’s scope. Or put simply, what you pass as the function’s arguments is all it should interact with. For example:
 
 ```jsx
 console.log(item.name) // "Metal Bottle"
@@ -98,18 +97,29 @@ prepareItemForCheckout(item)
 console.log(item.name) // "Metal Bottle (red)"
 ```
 
-As you can see, we’re modifying the item’s name inside the function, which affects the `item` variable in the global scope. Now your rendering logic for your UI may now be broken in subtle or not so subtle ways. In `prepareItemForCheckout` I could have changed the `name` property to a `list`, and maybe somewhere else in my code, it relies on `name` to have the `.toUpper()` method.
+As you can see, we’re modifying the item’s name inside the function, which affects the `item` variable in the global scope. Which could end up breaking your UI rendering logic. In `prepareItemForCheckout` I could have changed the `name` property to a `list`, and maybe somewhere else in my code, it relies on `name` to have the `.toUpper()` method.
 
 Lets take a look at a more complex example.
 
 ```jsx
+const item = {
+  id: 1234,
+  name: "Metal Bottle",
+  variation: "red",
+  price: {
+    currency: "NZD",
+    amount: 15.0,
+    tax: 0.15,
+  },
+}
+
 function computeTotalPrice({
   item: {
     price: { amount, tax },
   },
   firstTimeDiscount = false,
 }) {
-  const priceWithTax = amount * tax
+  const priceWithTax = amount * (1 + tax)
 
   if (firstTimeDiscount) {
     return priceWithTax * 0.9
@@ -118,6 +128,7 @@ function computeTotalPrice({
   return priceWithTax
 }
 
+console.log(computeTotalPrice({ item })) // 17.25
 console.log(computeTotalPrice({ item, firstTimeDiscount: true })) // 15.525
 ```
 
@@ -128,11 +139,11 @@ I’d like to draw attention to the function call. What would it look like witho
 ```jsx
 // with object destructuring
 computeTotalPrice({ item, firstTimeDiscount: true })
-//without
+// without
 computeTotalPrice(item, true)
 ```
 
-What’s `true`? It’s impossible to tell how that argument is being used by the function without looking at the function definition itself. With object destructuring, the purpose is crystal clear.
+Sorry to get philosophical, but what is `true`? It’s impossible to tell how that argument is being used by the function without looking at the function definition itself. With object destructuring, the purpose is crystal clear.
 
 ## Conclusion
 
@@ -140,7 +151,5 @@ To reiterate, object destructuring in JavaScript is useful because it:
 
 1. Makes the properties used in a function more obvious.
 2. Makes function calls more readable by providing context such as `firstTimeDiscount: true`
-3. Helps to prevent side effects.
-4. Enables code editors to give more helpful suggestions.
-
-Thanks for reading! 👋
+3. Helps to prevent function side effects.
+4. Enables some code editors to give more helpful suggestions.

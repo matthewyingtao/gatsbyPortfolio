@@ -1,0 +1,15 @@
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-neu-md);
+  width: 25rem;
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  color: var(--white);
+}
+
+.contactCard h4 {
+  margin-bottom: 0;
+}

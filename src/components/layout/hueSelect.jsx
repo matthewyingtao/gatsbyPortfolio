@@ -37,7 +37,7 @@ export function HueSelect() {
   const [hue, setHue] = React.useState(defaultHue)
   const [open, setOpen] = React.useState(false)
 
-  const ColorButton = ({ name, hue, i }) => (
+  const ColorButton = ({ name, hue, i, open }) => (
     <button
       className={colorButtonStyle}
       style={{ "--btnHue": hue, "--idx": i }}
@@ -45,6 +45,7 @@ export function HueSelect() {
         setOpen(false)
         setHue(hue)
       }}
+      tabindex={open ? undefined : "-1"}
       aria-label={name}
     />
   )
@@ -73,7 +74,13 @@ export function HueSelect() {
       </button>
       <div className={[picker, open ? openstyle : ""].join(" ")}>
         {colors.map(({ name, hue: colorHue }, i) => (
-          <ColorButton key={name} hue={colorHue} name={name} i={i} />
+          <ColorButton
+            key={name}
+            hue={colorHue}
+            name={name}
+            i={i}
+            open={open}
+          />
         ))}
       </div>
     </div>
