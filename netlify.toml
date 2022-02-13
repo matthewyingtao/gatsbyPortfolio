@@ -1,0 +1,10 @@
+[build]
+	command = "gatsby build"
+ 	publish = "public"
+
+[[plugins]]
+  	package = "netlify-plugin-submit-sitemap"
+
+		[plugins.inputs]
+
+		sitemapPath = "/sitemap/sitemap-index.xml"
