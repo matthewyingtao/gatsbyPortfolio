@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://matthewtao.netlify.app`,
+    siteUrl: `https://www.matthewtao.com`,
   },
   flags: {
     FAST_DEV: true,
@@ -49,11 +49,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     // Build and SEO optimizations
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-remove-fingerprints`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://matthewtao.netlify.app`,
+        siteUrl: `https://www.matthewtao.com`,
       },
     },
     `gatsby-plugin-sitemap`,
