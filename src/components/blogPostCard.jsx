@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { card, date as dateStyle } from "./blogPostCard.module.css"
 
 export function BlogPostCard({ title, date, description, slug }) {
@@ -15,3 +15,14 @@ export function BlogPostCard({ title, date, description, slug }) {
     </Link>
   )
 }
+
+export const query = graphql`
+  fragment BlogPostCard on MarkdownRemark {
+    frontmatter {
+      date
+      slug
+      title
+      description
+    }
+  }
+`

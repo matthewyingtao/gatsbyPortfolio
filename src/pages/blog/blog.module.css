@@ -1,0 +1,6 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+  gap: var(--space-lg);
+}

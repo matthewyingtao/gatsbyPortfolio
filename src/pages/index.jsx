@@ -162,12 +162,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            title
-            slug
-            date
-            description
-          }
+          ...BlogPostCard
         }
       }
     }

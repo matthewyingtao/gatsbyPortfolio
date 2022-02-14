@@ -3,6 +3,7 @@ slug: "practical-object-destructuring"
 title: "A Practical Guide to Object Destructuring in JavaScript"
 date: "09/02/2022"
 description: "Practical examples of how to use object destructuring in JavaScript."
+tags: [javascript, tutorial]
 ---
 
 ## What is object destructuring?
