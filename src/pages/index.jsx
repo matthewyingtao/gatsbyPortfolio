@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { IoIosArrowForward } from "react-icons/io"
+import { IoIosArrowRoundForward, IoIosArrowForward } from "react-icons/io"
 
 import { BlogPostList } from "../components/blogPostList"
 import Seo from "../components/layout/seo"
@@ -13,6 +13,7 @@ import {
   blurb,
   focus,
   writing,
+  contactButton,
 } from "./index.module.css"
 import { ArrowLink } from "../components/arrowLink"
 
@@ -135,8 +136,11 @@ export default function Home({ data: { posts } }) {
               </span>
             </li>
           </ul>
-          <ArrowLink to={"/about"} text={"More about me"} />
-          <ArrowLink to={"/contact"} text={"Get in touch"} />
+          <a href="#contact" className={contactButton}>
+            Get in touch
+            <IoIosArrowRoundForward size={32} />
+          </a>
+          <ArrowLink to={"/about"}>{"More about me"}</ArrowLink>
         </div>
       </div>
       <section>

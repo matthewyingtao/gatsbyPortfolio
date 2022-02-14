@@ -1,5 +1,5 @@
 .card {
-  background: var(--primary-gradient-ltr);
+  background: var(--color-gradient-ltr);
   background-size: 200%;
   background-position: 0%;
   box-shadow: var(--shadow-neu-md);

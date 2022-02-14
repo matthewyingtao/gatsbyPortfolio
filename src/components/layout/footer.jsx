@@ -1,5 +1,5 @@
 import React from "react"
-import { footer, divider } from "./footer.module.css"
+import { footer, divider, contact } from "./footer.module.css"
 
 export function Footer() {
   return (
@@ -12,6 +12,9 @@ export function Footer() {
         <Fish />
       </div>
       <section>Made with 💖 by Matthew Tao.</section>
+      <section id="contact" className={contact}>
+        Contact.
+      </section>
     </footer>
   )
 }

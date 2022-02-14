@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import { IoIosArrowRoundForward } from "react-icons/io"
 import { arrowLink as arrowLinkStyle } from "./arrowLink.module.css"
 
-export function ArrowLink({ to, text, ...props }) {
+export function ArrowLink({ to, children, ...props }) {
   return (
     <Link to={to} className={arrowLinkStyle} {...props}>
-      {text} <IoIosArrowRoundForward size={32} />
+      {children} <IoIosArrowRoundForward size={32} />
     </Link>
   )
 }

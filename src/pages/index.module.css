@@ -58,6 +58,32 @@
   transform: translateX(var(--space-sm));
 }
 
+.contactButton {
+  display: flex;
+  width: max-content;
+  margin-left: auto;
+  margin-block: var(--space-md);
+  color: var(--dark);
+  cursor: pointer;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-gradient-ltr);
+  background-position-x: 0%;
+  background-size: 200%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-neu-sm);
+  transition: background-position-x 175ms ease-out, color 150ms ease-out;
+}
+
+.contactButton:hover,
+.contactButton:focus {
+  background-position-x: 100%;
+  color: var(--white);
+}
+
+.contactButton:active {
+  box-shadow: var(--shadow-button);
+}
+
 .writing path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;

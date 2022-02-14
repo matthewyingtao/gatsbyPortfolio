@@ -23,15 +23,16 @@
 
   --primary: var(--primary-400);
 
-  --primary-gradient-ltr: linear-gradient(
+  --color-gradient-ltr: linear-gradient(
     to right,
     var(--primary-400),
-    var(--primary-300)
+    hsl(calc(var(--hue) + 25), 90%, 80%)
   );
-  --primary-gradient-ttb: linear-gradient(
+
+  --color-gradient-ttb: linear-gradient(
     to bottom,
     var(--primary-400),
-    var(--primary-300)
+    hsl(calc(var(--hue) + 25), 90%, 80%)
   );
 
   --text: var(--white);
@@ -83,11 +84,13 @@
       hsl(var(--hue), 55%, 30%),
     inset 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 20%);
 
-  --shadow-button: inset -0.25rem -0.25rem 0.5rem hsl(var(--hue), 55%, 40%),
-    inset 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 60%);
+  --shadow-button: inset -0.25rem -0.25rem 0.5rem
+      hsl(calc(var(--hue) + 15), 90%, 85%),
+    inset 0.25rem 0.25rem 0.5rem hsl(calc(var(--hue) + 25), 90%, 70%);
 
-  --shadow-button-lg: inset -0.5rem -0.5rem 1rem hsl(var(--hue), 55%, 40%),
-    inset 0.5rem 0.5rem 1rem hsl(var(--hue), 55%, 35%);
+  --shadow-button-lg: inset -0.5rem -0.5rem 1rem
+      hsl(calc(var(--hue) + 15), 90%, 85%),
+    inset 0.5rem 0.5rem 1rem hsl(calc(var(--hue) + 25), 90%, 70%);
 }
 
 /* scrollbar */
@@ -100,7 +103,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--primary-gradient-ttb);
+  background: var(--color-gradient-ttb);
   background-position-x: 0%;
   background-size: 200%;
   border-radius: 999px;
@@ -188,7 +191,7 @@ aside {
 
 button {
   cursor: pointer;
-  background: var(--primary-gradient-ltr);
+  background: var(--color-gradient-ltr);
   background-position-x: 0%;
   background-size: 200%;
   border: none;
@@ -229,7 +232,7 @@ utility
 }
 
 mark {
-  background: var(--primary-gradient-ltr);
+  background: var(--color-gradient-ltr);
   color: var(--black);
   padding: 0.125rem 0.25rem;
 }
@@ -237,8 +240,6 @@ mark {
 em {
   font-style: inherit;
   color: transparent;
-  background-image: var(--primary-gradient-ltr);
-  background-size: 200%;
-  background-position: 0%;
+  background-image: var(--color-gradient-ltr);
   background-clip: text;
 }

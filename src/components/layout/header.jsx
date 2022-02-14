@@ -21,10 +21,6 @@ export function Header() {
       name: "About",
       to: "/about",
     },
-    {
-      name: "Contact",
-      to: "/contact",
-    },
   ]
 
   return (

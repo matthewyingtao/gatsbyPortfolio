@@ -17,7 +17,7 @@
   text-decoration: none;
   padding-left: var(--space-lg);
   transition: color 150ms ease-in-out, transform 50ms ease-in-out;
-  background-image: var(--primary-gradient-ltr);
+  background-image: var(--color-gradient-ltr);
   background-size: 200%;
   background-position: 0%;
   background-clip: text;
@@ -39,7 +39,7 @@
   width: var(--space-sm);
   border-radius: 999px;
   height: 100%;
-  background: var(--primary-gradient-ltr);
+  background: var(--color-gradient-ltr);
   transition: transform 100ms ease-in-out;
 }
 
