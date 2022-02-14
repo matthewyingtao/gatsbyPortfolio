@@ -146,9 +146,7 @@ export default function Home({ data: { posts } }) {
         </div>
       </div>
       <section>
-        <h1>
-          Blog<em>.</em>
-        </h1>
+        <h2>Latest posts</h2>
         <BlogPostList posts={posts.edges.map(({ node }) => node)} />
         <ArrowLink to={"/blog"}>{"View all"}</ArrowLink>
       </section>

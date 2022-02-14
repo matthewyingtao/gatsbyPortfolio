@@ -2,7 +2,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: var(--space-md);
 }
 
 .arrowLink svg {
