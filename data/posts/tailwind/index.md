@@ -4,6 +4,7 @@ title: "Initial thoughts on TailwindCSS"
 date: "13/02/2022"
 description: "My thoughts on TailwindCSS, it's benefits and detriments."
 tags: [css, thoughts]
+finished: false
 ---
 
 ## Introduction

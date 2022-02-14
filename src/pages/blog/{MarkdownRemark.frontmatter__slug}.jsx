@@ -6,7 +6,7 @@ import "./blogPage.css"
 export default function Home({ data }) {
   const {
     markdownRemark: {
-      frontmatter: { title, date, description, tags },
+      frontmatter: { title, date, description, tags, finished },
       html,
       tableOfContents,
     },
@@ -17,6 +17,9 @@ export default function Home({ data }) {
       <Seo title={title} description={description} />
       <h1 className="blogTitle">{title}</h1>
       <div className="blogContent">
+        {!finished && (
+          <p className="blogStatus">⚠️This post is a work in progress!⚠️</p>
+        )}
         <div className="tableOfContents">
           <h2>Table of Contents</h2>
           <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
@@ -48,6 +51,7 @@ export const query = graphql`
         description
         title
         tags
+        finished
       }
     }
   }
