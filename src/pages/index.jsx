@@ -123,11 +123,13 @@ export default function Home({ data: { posts } }) {
           <ul style={{ marginTop: "-0.5rem" }}>
             <li>
               <IoIosArrowForward />
-              <span>Design</span>
+              <span>The value of soft skills</span>
             </li>
             <li>
               <IoIosArrowForward />
-              <span>Communication</span>
+              <span>
+                The <small>little</small> things that make a website delightful
+              </span>
             </li>
             <li>
               <IoIosArrowForward />

@@ -178,6 +178,29 @@ code {
   font-family: var(--mono);
 }
 
+mark {
+  background: var(--color-gradient-ltr);
+  color: var(--black);
+  padding: 0.125rem 0.25rem;
+}
+
+em {
+  font-style: inherit;
+  color: transparent;
+  background-image: var(--color-gradient-ltr);
+  background-clip: text;
+}
+
+small {
+  font-size: var(--text-300);
+  line-height: var(--line-height-400);
+  font-style: italic;
+  background: var(--black);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  border: var(--primary) solid 1px;
+}
+
 aside {
   border-left: var(--primary) solid var(--space-sm);
   background: var(--black);
@@ -229,17 +252,4 @@ utility
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-mark {
-  background: var(--color-gradient-ltr);
-  color: var(--black);
-  padding: 0.125rem 0.25rem;
-}
-
-em {
-  font-style: inherit;
-  color: transparent;
-  background-image: var(--color-gradient-ltr);
-  background-clip: text;
 }
