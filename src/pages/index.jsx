@@ -150,7 +150,7 @@ export default function Home({ data: { posts } }) {
           Blog<em>.</em>
         </h1>
         <BlogPostList posts={posts.edges.map(({ node }) => node)} />
-        <ArrowLink to={"/blog"} text={"View all"} />
+        <ArrowLink to={"/blog"}>{"View all"}</ArrowLink>
       </section>
     </>
   )
