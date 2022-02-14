@@ -1,29 +1,37 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Seo from "../../components/layout/seo"
 import "./blogPage.css"
 
 export default function Home({ data }) {
   const {
     markdownRemark: {
-      frontmatter: { title, date, description },
+      frontmatter: { title, date, description, tags },
       html,
       tableOfContents,
     },
   } = data
 
   return (
-    <>
+    <article>
       <Seo title={title} description={description} />
       <h1 className="blogTitle">{title}</h1>
-      <article className="blogContent">
+      <div className="blogContent">
         <div className="tableOfContents">
           <h2>Table of Contents</h2>
           <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-      </article>
-    </>
+        <p style={{ marginTop: "var(--space-xl)" }}>
+          <small>Written on {date}</small> in tags{" "}
+          {tags.map(tag => (
+            <Link to={`/blog/tag/${tag}`}>
+              <small>#{tag}</small>
+            </Link>
+          ))}
+        </p>
+      </div>
+    </article>
   )
 }
 
@@ -36,6 +44,7 @@ export const query = graphql`
         date
         description
         title
+        tags
       }
     }
   }
