@@ -35,9 +35,10 @@ export function Header() {
         {routes.map(({ name, to }, i) => (
           <>
             <Link to={to}>{name}</Link>
-            {i < routes.length - 1 && <em>|</em>}
+            <em>|</em>
           </>
         ))}
+        <a href="#contact">Contact</a>
       </nav>
     </header>
   )
