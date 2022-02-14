@@ -1,0 +1,33 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-gradient-ltr);
+  background-size: 200%;
+  background-position: 0%;
+  box-shadow: var(--shadow-neu-md);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  color: var(--dark);
+  margin-bottom: var(--space-xl);
+}
+
+.contact a {
+  color: var(--black);
+}
+
+.contact a:hover {
+  color: var(--dark);
+}
+
+.showing {
+  animation: swish 500ms ease-out 4 alternate;
+}
+
+@keyframes swish {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}

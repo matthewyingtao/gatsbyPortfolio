@@ -30,22 +30,3 @@
   filter: drop-shadow(0.25rem 0.25rem 0.25rem hsl(var(--hue), 55%, 17%))
     drop-shadow(-0.25rem -0.25rem 0.25rem hsl(var(--hue), 55%, 33%));
 }
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  background: var(--color-gradient-ltr);
-  box-shadow: var(--shadow-neu-md);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl);
-  color: var(--dark);
-  margin-bottom: var(--space-xl);
-}
-
-.contact a {
-  color: var(--black);
-}
-
-.contact a:hover {
-  color: var(--dark);
-}
