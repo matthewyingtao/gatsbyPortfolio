@@ -31,14 +31,14 @@ export function Header() {
         </Link>
         <HueSelect />
       </div>
-      <div className={links}>
+      <nav className={links}>
         {routes.map(({ name, to }, i) => (
           <>
             <Link to={to}>{name}</Link>
-            {i < routes.length - 1 && <span> / </span>}
+            {i < routes.length - 1 && <em>|</em>}
           </>
         ))}
-      </div>
+      </nav>
     </header>
   )
 }
