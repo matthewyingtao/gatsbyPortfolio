@@ -28,6 +28,7 @@
     "gatsby-plugin-sharp": "^4.6.0",
     "gatsby-plugin-sitemap": "^5.7.0",
     "gatsby-plugin-slug": "^2.0.0",
+    "gatsby-remark-autolink-headers": "^5.7.0",
     "gatsby-remark-highlight-code": "^3.2.0",
     "gatsby-remark-images": "^6.6.0",
     "gatsby-remark-prismjs": "^6.7.0",

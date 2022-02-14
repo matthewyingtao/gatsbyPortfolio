@@ -24,11 +24,11 @@ export function Footer() {
       </section>
       <p>
         Made with 💖 by Matthew Tao using{" "}
-        <a href="https://www.gatsbyjs.com/" target="_blank">
+        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
           Gatsby JS
         </a>
         , hosted with{" "}
-        <a href="https://www.netlify.com/" target="_blank">
+        <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
           Netlify
         </a>
       </p>
@@ -41,6 +41,7 @@ export function Footer() {
         }}
         href="https://github.com/matthewyingtao/gatsbyPortfolio"
         target="_blank"
+        rel="noreferrer"
       >
         <IoLogoGithub size={24} /> Source Code
       </a>

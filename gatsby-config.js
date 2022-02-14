@@ -37,6 +37,12 @@ module.exports = {
               quality: 75,
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+            },
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-responsive-iframe`,
         ],

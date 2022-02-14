@@ -109,7 +109,7 @@ export default function Home({ data: { posts } }) {
             className={portrait}
             placeholder="blurred"
             alt="portait of me!"
-            src="../assets/portrait.jpg"
+            src="../assets/portrait.webp"
             loading="eager"
           />
           <IntroSVG className={pointer} />
