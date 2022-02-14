@@ -1,5 +1,6 @@
 import React from "react"
 import { footer, divider, contact } from "./footer.module.css"
+import { IoLogoGithub } from "react-icons/io"
 
 export function Footer() {
   return (
@@ -11,10 +12,38 @@ export function Footer() {
         <QuarterCircle />
         <Fish />
       </div>
-      <section>Made with 💖 by Matthew Tao.</section>
       <section id="contact" className={contact}>
-        Contact.
+        <h2>Contact</h2>
+        <p style={{ lineHeight: "var(--line-height-400)" }}>
+          Feel free to email me about any corrections, suggestions or questions!
+          You can find me at{" "}
+          <a href="mailto:matthew.yingtao@gmail.com">
+            matthew.yingtao@gmail.com
+          </a>
+        </p>
       </section>
+      <p>
+        Made with 💖 by Matthew Tao using{" "}
+        <a href="https://www.gatsbyjs.com/" target="_blank">
+          Gatsby JS
+        </a>
+        , hosted with{" "}
+        <a href="https://www.netlify.com/" target="_blank">
+          Netlify
+        </a>
+      </p>
+      {/* github logo */}
+      <a
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "var(--space-md)",
+        }}
+        href="https://github.com/matthewyingtao/gatsbyPortfolio"
+        target="_blank"
+      >
+        <IoLogoGithub size={24} /> Source Code
+      </a>
     </footer>
   )
 }
