@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { header, topRow, links, logo } from "./header.module.css"
+import { header, topRow, links, active, logo } from "./header.module.css"
 import { HueSelect } from "./hueSelect"
 
 export function Header() {
@@ -34,7 +34,9 @@ export function Header() {
       <nav className={links}>
         {routes.map(({ name, to }, i) => (
           <>
-            <Link to={to}>{name}</Link>
+            <Link activeClassName={active} to={to}>
+              {name}
+            </Link>
             <em>|</em>
           </>
         ))}
