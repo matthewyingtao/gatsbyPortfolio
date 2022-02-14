@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blogPosts`,
-        path: `${__dirname}/data/posts`,
+        path: `${__dirname}/data/`,
       },
     },
     {
@@ -48,9 +48,11 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-preact",
+    `gatsby-transformer-json`,
     "gatsby-plugin-slug",
+    "gatsby-plugin-preact",
     `gatsby-plugin-react-helmet`,
+    // Image processing
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

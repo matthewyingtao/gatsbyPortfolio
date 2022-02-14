@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Environ",
+    "description": "An app that utilises AI to encourage recycling.",
+    "img": "./environ.webp"
+  },
+  {
+    "name": "blogg",
+    "description": "A blog that I made to learn more about developing Flutter apps.",
+    "img": "./blogg.webp"
+  },
+  {
+    "name": "Gif Creator",
+    "description": "A simple web app that allows you to create meme gifs from images or videos.",
+    "img": "./gif.webp"
+  }
+]

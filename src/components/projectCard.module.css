@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  background: var(--color-gradient-ltr);
+  box-shadow: var(--shadow-neu-md);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  color: var(--dark);
+}
+
+.cardImage {
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+}
+
+@media screen and (min-width: 30rem) {
+  .card {
+    flex-direction: row;
+  }
+  .cardImage {
+    height: 12rem;
+  }
+}

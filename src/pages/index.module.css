@@ -60,6 +60,7 @@
 
 .contactButton {
   display: flex;
+  align-items: center;
   width: max-content;
   margin-left: auto;
   margin-block: var(--space-md);
