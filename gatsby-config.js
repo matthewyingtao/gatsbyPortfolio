@@ -57,7 +57,12 @@ module.exports = {
         siteUrl: `https://www.matthewtao.com`,
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: ["/blog/tag/**"],
+      },
+    },
     "gatsby-plugin-robots-txt",
   ],
 }
