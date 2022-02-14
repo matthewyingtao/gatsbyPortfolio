@@ -23,7 +23,10 @@ export default function Home({ data }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <p style={{ marginTop: "var(--space-xl)" }}>
-          <small>Written on {date}</small> in tags{" "}
+          <time dateTime={date}>
+            <small>Written on {date}</small>
+          </time>{" "}
+          in tags{" "}
           {tags.map(tag => (
             <Link to={`/blog/tag/${tag}`}>
               <small>#{tag}</small>
