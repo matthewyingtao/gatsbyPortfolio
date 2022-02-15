@@ -11,7 +11,7 @@
           "state": {
             "file": "about/index.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -90,6 +90,7 @@
   "active": "d231506e99c4615d",
   "lastOpenFiles": [
     "about/index.md",
+    "about/scratch.png",
     "Post Ideas.md",
     "uses/index.md",
     "uses/My_VSCode_appearance.png",
