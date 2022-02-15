@@ -13,7 +13,7 @@ export default function Blog({ data: { posts } }) {
       <h1 className="title">
         Blog<em>.</em>
       </h1>
-      <p style={{ lineHeight: "var(--line-height-200)" }}>Sort by tag</p>
+      <p>Sort by tag</p>
       <div className={tagsStyle}>
         {tags.map(tag => (
           <Link to={`/blog/tag/${tag}`}>#{tag}</Link>
