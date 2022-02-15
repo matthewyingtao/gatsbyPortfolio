@@ -151,7 +151,7 @@ h4 {
   margin-bottom: 0.5em;
 }
 
-p + :is(h1, h2, h3, h4, h5, h6, p) {
+:is(p, ul, ol) + :is(h1, h2, h3, h4, h5, h6, p) {
   margin-top: 0.5em;
 }
 
@@ -298,6 +298,11 @@ utility
   max-width: var(--max-text-width);
   margin-inline: auto;
 }
+
+.blogContent p + :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0.5em;
+}
+
 
 /* images */
 .gatsby-resp-image-wrapper {
