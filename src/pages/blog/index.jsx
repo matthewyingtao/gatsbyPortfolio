@@ -10,7 +10,7 @@ export default function Blog({ data: { posts } }) {
   return (
     <>
       <Seo />
-      <h1>
+      <h1 className="title">
         Blog<em>.</em>
       </h1>
       <p style={{ lineHeight: "var(--line-height-200)" }}>Sort by tag</p>

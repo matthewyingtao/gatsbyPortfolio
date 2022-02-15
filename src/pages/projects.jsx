@@ -10,7 +10,7 @@ export default function Projects({ data: { projects } }) {
   return (
     <>
       <Seo />
-      <h1>
+      <h1 className="title">
         Projects<em>.</em>
       </h1>
       <div className={projectCardList}>

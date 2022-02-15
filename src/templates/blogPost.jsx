@@ -15,7 +15,7 @@ export default function Home({ data }) {
   return (
     <article>
       <Seo title={title} description={description} />
-      <h1 className="blogTitle">{title}</h1>
+      <h1 className="title">{title}</h1>
       <div className="blogContent">
         {!finished && (
           <p className="blogStatus">⚠️This post is a work in progress!⚠️</p>

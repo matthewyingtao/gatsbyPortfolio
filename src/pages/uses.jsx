@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Seo from "../components/layout/seo"
 
-export default function Home({ data }) {
+export default function Uses({ data }) {
   const {
     markdownRemark: { html },
   } = data
@@ -10,6 +10,7 @@ export default function Home({ data }) {
   return (
     <article>
       <Seo />
+      <h1 className="title"><em>/</em>Uses</h1>
       <div className="blogContent">
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
