@@ -26,8 +26,12 @@ const Seo = ({
           name: `keywords`,
           content: keywords.join(", "),
         },
+        {
+          name: "google-site-verification",
+          content: "4bVvZA3ngyZQr4cVZjcW42QoIjybeIeVGqEfcMB1Aus",
+        },
       ]}
-    ></Helmet>
+    />
   )
 }
 
