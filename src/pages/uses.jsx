@@ -9,7 +9,10 @@ export default function Uses({ data }) {
 
   return (
     <article>
-      <Seo />
+      <Seo
+        title="/Uses"
+        description="Inspired by Wes Bos' uses page."
+      />
       <h1 className="title"><em>/</em>Uses</h1>
       <div className="blogContent">
         <div dangerouslySetInnerHTML={{ __html: html }} />

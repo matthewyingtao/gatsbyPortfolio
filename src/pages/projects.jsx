@@ -9,7 +9,10 @@ export default function Projects({ data: { projects } }) {
 
   return (
     <>
-      <Seo />
+      <Seo
+        title="Projects"
+        description="Matthew Tao's projects, mostly stuff I've put together in my free time."
+      />
       <h1 className="title">
         Projects<em>.</em>
       </h1>

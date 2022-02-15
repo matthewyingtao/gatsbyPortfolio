@@ -9,7 +9,10 @@ export default function Blog({ data: { posts } }) {
 
   return (
     <>
-      <Seo />
+      <Seo
+        title="Blog"
+        description="Matthew Tao's blog, some of my thoughts and tutorials on web development."
+      />
       <h1 className="title">
         Blog<em>.</em>
       </h1>

@@ -4,4 +4,4 @@ How I make good looking designs
 
 The design of my website.
 
-Learn Lodash by pulling it apart
+Learn Lodash by pulling it apart (currying)

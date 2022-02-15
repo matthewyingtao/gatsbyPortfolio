@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "about/index.md",
+            "file": "Post Ideas.md",
             "mode": "source",
             "source": true
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about/index.md",
+                "file": "Post Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,9 +89,9 @@
   },
   "active": "d231506e99c4615d",
   "lastOpenFiles": [
+    "Post Ideas.md",
     "about/index.md",
     "about/scratch.png",
-    "Post Ideas.md",
     "uses/index.md",
     "uses/My_VSCode_appearance.png",
     "projects/environ.webp"
