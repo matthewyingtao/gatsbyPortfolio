@@ -15,6 +15,11 @@
   background-position: 100%;
 }
 
+.postData {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card:active {
   box-shadow: var(--shadow-button-lg);
   transform: translateY(var(--space-sm));
@@ -22,4 +27,19 @@
 
 .date {
   font-size: var(--text-300);
+  margin-bottom: var(--space-lg);
+}
+
+.tagsWrapper {
+  font-size: var(--text-300);
+  font-style: italic;
+  text-align: end;
+}
+
+.tagsWrapper a {
+  color: var(--dark);
+}
+
+.tagsWrapper a:hover {
+  color: var(--white);
 }

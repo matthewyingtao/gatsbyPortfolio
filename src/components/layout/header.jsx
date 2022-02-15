@@ -21,6 +21,10 @@ export function Header() {
       name: "About",
       to: "/about",
     },
+    {
+      name: "Uses",
+      to: "/uses",
+    },
   ]
 
   return (

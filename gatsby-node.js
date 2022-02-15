@@ -8,9 +8,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      tagsGroup: allMarkdownRemark(limit: 2000) {
+      tagsGroup: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(posts)/" } }
+      ) {
         group(field: frontmatter___tags) {
           fieldValue
+        }
+        edges {
+          node {
+            id
+            frontmatter {
+              slug
+            }
+          }
         }
       }
     }
@@ -32,6 +42,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
+      },
+    })
+  })
+
+  // Make post pages
+  const posts = result.data.tagsGroup.edges
+
+  posts.forEach(({ node }) => {
+    createPage({
+      path: `/blog/post/${node.frontmatter.slug}`,
+      component: path.resolve(`./src/templates/blogPost.jsx`),
+      context: {
+        id: node.id,
       },
     })
   })

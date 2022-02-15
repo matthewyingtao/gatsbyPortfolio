@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "5fb17d523ad31dbc",
+    "type": "split",
+    "children": [
+      {
+        "id": "d231506e99c4615d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "uses/index.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "94bbae50c1b80c5c",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6ac7e395611d834",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ffcd31ebdc29f1b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "610fb25944508313",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0317b4452eba4735",
+    "type": "split",
+    "children": [
+      {
+        "id": "7adfe0654be3efd5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37afd0df28b7bae4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "uses/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d231506e99c4615d",
+  "lastOpenFiles": [
+    "uses/index.md",
+    "uses/My_VSCode_appearance.png",
+    "projects/environ.webp"
+  ]
+}

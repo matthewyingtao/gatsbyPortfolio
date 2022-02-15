@@ -2,23 +2,33 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
-  background: var(--color-gradient-ltr);
-  box-shadow: var(--shadow-neu-md);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl);
-  color: var(--dark);
 }
 
 .cardImage {
   aspect-ratio: 1;
   flex-shrink: 0;
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-neu-md);
+}
+
+.projectInfo {
+  background: var(--color-gradient-ltr);
+  box-shadow: var(--shadow-neu-md);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  color: var(--dark);
+  width: 100%;
 }
 
 @media screen and (min-width: 30rem) {
   .card {
     flex-direction: row;
   }
+
+  .card:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+
   .cardImage {
     height: 12rem;
   }

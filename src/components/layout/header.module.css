@@ -49,6 +49,7 @@
 
 .links {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-md);
   margin-left: var(--space-lg);
 }

@@ -5,15 +5,18 @@ import { BlogPostCard } from "./blogPostCard"
 export function BlogPostList({ posts }) {
   return (
     <div className={list}>
-      {posts.map(({ id, frontmatter: { title, date, description, slug } }) => (
-        <BlogPostCard
-          key={id}
-          title={title}
-          date={date}
-          description={description}
-          slug={slug}
-        />
-      ))}
+      {posts.map(
+        ({ id, frontmatter: { title, date, description, slug, tags } }) => (
+          <BlogPostCard
+            key={id}
+            title={title}
+            date={date}
+            description={description}
+            slug={slug}
+            tags={tags}
+          />
+        )
+      )}
     </div>
   )
 }

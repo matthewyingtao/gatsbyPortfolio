@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Seo from "../../components/layout/seo"
-import "./blogPage.css"
+import Seo from "../components/layout/seo"
+import "./blogPost.css"
 
 export default function Home({ data }) {
   const {
@@ -26,14 +26,17 @@ export default function Home({ data }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <p style={{ marginTop: "var(--space-xl)" }}>
+          Written on{" "}
           <time dateTime={date}>
-            <small>Written on {date}</small>
+            <small>{date}</small>
           </time>{" "}
           in tags{" "}
           {tags.map(tag => (
-            <Link to={`/blog/tag/${tag}`}>
-              <small>#{tag}</small>
-            </Link>
+            <>
+              <Link to={`/blog/tag/${tag}`}>
+                <small>#{tag}</small>
+              </Link>{" "}
+            </>
           ))}
         </p>
       </div>

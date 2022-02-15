@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { card, cardImage } from "./projectCard.module.css"
+import { card, cardImage, projectInfo } from "./projectCard.module.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export function ProjectCard({ name, description, img }) {
@@ -9,7 +9,7 @@ export function ProjectCard({ name, description, img }) {
   return (
     <div className={card}>
       <GatsbyImage className={cardImage} image={image} />
-      <div>
+      <div className={projectInfo}>
         <h2>{name}</h2>
         <p>{description}</p>
       </div>
