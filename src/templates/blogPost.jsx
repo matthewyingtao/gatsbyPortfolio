@@ -47,7 +47,6 @@ export default function Home({ data }) {
 export const query = graphql`
   query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      tableOfContents
       html
       frontmatter {
         date
