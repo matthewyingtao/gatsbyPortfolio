@@ -30,7 +30,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1080,
+              maxWidth: 800,
               withWebp: true,
               wrapperStyle: `width: 100%; margin: var(--space-xl) auto;`,
               showCaptions: true,
@@ -48,7 +48,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     // Image processing
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `blurred`,
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     // Build and SEO optimizations
     `gatsby-plugin-netlify`,
