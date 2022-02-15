@@ -70,7 +70,7 @@ export function HueSelect() {
         onClick={() => setOpen(!open)}
         aria-label="Open color selector"
       >
-        <IoMdColorPalette style={{ fill: "var(--white)" }} />
+        <IoMdColorPalette />
       </button>
       <div className={[picker, open ? openstyle : ""].join(" ")}>
         {colors.map(({ name, hue: colorHue }, i) => (

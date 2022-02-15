@@ -11,6 +11,7 @@
   border-radius: 999px;
   height: 1.5em;
   width: 1.5em;
+  color: var(--black);
 }
 
 .openbutton svg {
