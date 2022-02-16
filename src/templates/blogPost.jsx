@@ -8,7 +8,6 @@ export default function Home({ data }) {
     markdownRemark: {
       frontmatter: { title, date, description, tags, finished },
       html,
-      tableOfContents,
     },
   } = data
 
@@ -20,10 +19,6 @@ export default function Home({ data }) {
         {!finished && (
           <p className="blogStatus">⚠️This post is a work in progress!⚠️</p>
         )}
-        <div className="tableOfContents">
-          <h2>Table of Contents</h2>
-          <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-        </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <p style={{ marginTop: "var(--space-xl)" }}>
           Written on{" "}

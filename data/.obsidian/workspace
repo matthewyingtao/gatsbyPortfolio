@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Post Ideas.md",
+            "file": "posts/ramdaCurryBySourceCode/index.md",
             "mode": "source",
-            "source": true
+            "source": false
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Post Ideas.md",
+                "file": "posts/ramdaCurryBySourceCode/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,8 @@
   },
   "active": "d231506e99c4615d",
   "lastOpenFiles": [
+    "posts/ramdaCurryBySourceCode/index.md",
+    "posts/objectDestructuring/index.md",
     "Post Ideas.md",
     "about/index.md",
     "about/scratch.png",

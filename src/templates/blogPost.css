@@ -3,6 +3,17 @@
   padding-block: var(--space-xl);
 }
 
+.gatsby-highlight + .gatsby-highlight {
+  padding-top: 0;
+}
+
+.gatsby-highlight-code-line {
+  display: block;
+  padding-left: var(--space-md);
+  margin-left: calc((var(--space-sm) + var(--space-md)) * -1);
+  border-left: var(--space-sm) solid var(--primary);
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: var(--text-300);
@@ -58,7 +69,7 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: 0.125rem 0.5rem;
-  white-space: normal;
+  white-space: nowrap;
   border-bottom: var(--primary-300) 1px solid;
   border-top-left-radius: var(--radius-sm);
   border-top-right-radius: var(--radius-sm);

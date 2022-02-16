@@ -37,7 +37,12 @@ module.exports = {
               quality: 75,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: "±",
+            },
+          },
           `gatsby-remark-responsive-iframe`,
         ],
       },

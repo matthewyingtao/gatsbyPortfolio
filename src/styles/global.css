@@ -201,8 +201,9 @@ small {
   border: var(--primary) solid 1px;
 }
 
-aside {
-  border-left: var(--primary) solid var(--space-sm);
+aside,
+blockquote {
+  position: relative;
   background: var(--black);
   padding: 1.25rem;
   border-top-right-radius: var(--radius-sm);
@@ -210,6 +211,30 @@ aside {
   margin-block: var(--space-xl);
   box-shadow: var(--shadow-neu-md);
   font-size: var(--text-300);
+}
+
+aside {
+  border-left: var(--primary) solid var(--space-sm);
+}
+
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: calc(var(--space-md) * -1);
+  left: calc(var(--space-md) * -1);
+  font-size: var(--text-900);
+  line-height: 0.8;
+  color: var(--primary);
+}
+
+blockquote::after {
+  content: "”";
+  position: absolute;
+  bottom: calc((var(--space-md) + 0.5em) * -1);
+  right: calc(var(--space-md) * -1);
+  font-size: var(--text-900);
+  line-height: 0.8;
+  color: var(--primary);
 }
 
 button {
