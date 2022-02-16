@@ -8,4 +8,4 @@
 		[plugins.inputs]
 
 		baseUrl = "https://www.matthewtao.com"
-		sitemapPath = "/sitemap/sitemap-index.xml"
+		sitemapPath = "/sitemap-index.xml"
