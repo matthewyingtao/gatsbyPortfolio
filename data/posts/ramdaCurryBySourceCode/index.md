@@ -3,7 +3,7 @@ slug: "ramda-curry-by-source-code"
 title: "Learn currying by looking at Rambda's source code"
 date: "16/02/2022"
 description: "Let's walk through Rambda's curry function to gain a deeper understanding of how to implement currying in JavaScript."
-tags: [javascript, tutorial, functional]
+tags: [javascript, tutorial, functional programming]
 finished: true
 ---
 
