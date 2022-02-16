@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        excludes: ["/blog/tag/**", "/uses"],
+        excludes: ["/blog/tag/**"],
       },
     },
     "gatsby-plugin-robots-txt",

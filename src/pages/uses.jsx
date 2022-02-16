@@ -11,9 +11,11 @@ export default function Uses({ data }) {
     <article>
       <Seo
         title="/Uses"
-        description="Inspired by Wes Bos' uses page."
+        description="Inspired by Wes Bos' uses page, the tech I use on a daily basis."
       />
-      <h1 className="title"><em>/</em>Uses</h1>
+      <h1 className="title">
+        <em>/</em>Uses
+      </h1>
       <div className="blogContent">
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
