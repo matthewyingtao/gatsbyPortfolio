@@ -1,5 +1,6 @@
-import { Link, graphql } from "gatsby"
 import React from "react"
+import { Link, graphql } from "gatsby"
+import { kebabCase } from "lodash"
 import { BlogPostList } from "../../components/blogPostList"
 import Seo from "../../components/layout/seo"
 import { tags as tagsStyle } from "./blogIndex.module.css"
@@ -19,7 +20,7 @@ export default function Blog({ data: { posts } }) {
       <p>Sort by tag</p>
       <div className={tagsStyle}>
         {tags.map(tag => (
-          <Link to={`/blog/tag/${tag}`}>#{tag}</Link>
+          <Link to={`/blog/tag/${kebabCase(tag)}`}>#{tag}</Link>
         ))}
       </div>
       <BlogPostList posts={posts.edges.map(({ node }) => node)} />

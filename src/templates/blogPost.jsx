@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Seo from "../components/layout/seo"
 import "./blogPost.css"
+import { kebabCase } from "lodash"
 
 export default function Home({ data }) {
   const {
@@ -28,7 +29,7 @@ export default function Home({ data }) {
           in tags{" "}
           {tags.map(tag => (
             <>
-              <Link to={`/blog/tag/${tag}`}>
+              <Link to={`/blog/tag/${kebabCase(tag)}`}>
                 <small>#{tag}</small>
               </Link>{" "}
             </>

@@ -6,6 +6,7 @@ import {
   date as dateStyle,
   tagsWrapper,
 } from "./blogPostCard.module.css"
+import { kebabCase } from "lodash"
 
 export function BlogPostCard({ title, date, description, slug, tags }) {
   return (
@@ -18,7 +19,7 @@ export function BlogPostCard({ title, date, description, slug, tags }) {
           <div className={tagsWrapper}>
             {tags.map(tag => (
               <>
-                <Link to={`/blog/tag/${tag}`}>#{tag}</Link>{" "}
+                <Link to={`/blog/tag/${kebabCase(tag)}`}>#{tag}</Link>{" "}
               </>
             ))}
           </div>
