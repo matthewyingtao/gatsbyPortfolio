@@ -78,6 +78,12 @@ module.exports = {
         excludes: ["/blog/tag/**"],
       },
     },
-    "gatsby-plugin-robots-txt",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.matthewtao.com",
+        sitemap: "https://www.matthewtao.com/sitemap-index.xml",
+      },
+    },
   ],
 };
