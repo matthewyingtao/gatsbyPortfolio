@@ -9,7 +9,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       tagsGroup: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/(posts)/" } }
+        filter: {
+          fileAbsolutePath: { regex: "/(posts)/" }
+          frontmatter: { finished: { eq: true } }
+        }
       ) {
         group(field: frontmatter___tags) {
           fieldValue
