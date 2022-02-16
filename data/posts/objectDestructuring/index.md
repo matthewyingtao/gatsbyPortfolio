@@ -15,13 +15,13 @@ In short, object destructuring is a syntax that allows you to extract values fro
 const favoriteFruit = {
   name: "apple",
   color: "red",
-}
+};
 
-const name = favoriteFruit.name
-const color = favoriteFruit.color
+const name = favoriteFruit.name;
+const color = favoriteFruit.color;
 
 // is equivalent to
-const { name, color } = favoriteFruit
+const { name, color } = favoriteFruit;
 ```
 
 How I like to think about it is that we’re stripping the properties we need from the object. But aside from being slightly more consise, why is destructuring useful? For that we need a more practical example.
@@ -38,21 +38,21 @@ const item = {
     amount: 15.0,
     tax: 0.15,
   },
-}
+};
 ```
 
 Here we have an item object that has a bunch of properties. Say we need to define a function that takes the id and variation properties from the item and return the stock numbers.
 
 ```jsx
 function getStock(item) {
-  const id = item.id
-  const variation = item.variation
+  const id = item.id;
+  const variation = item.variation;
   // make a fetch request to some API using the id and variation
 
-  return stock
+  return stock;
 }
 
-getStock(item)
+getStock(item);
 ```
 
 Here’s an example of how that would be accomplished without object destructuring. To contrast, here’s how the same functionality would be accomplished with object destructuring.
@@ -61,10 +61,10 @@ Here’s an example of how that would be accomplished without object destructuri
 function getStock({ id, variation }) {
   // make a fetch request to some API using the id and variation
 
-  return stock
+  return stock;
 }
 
-getStock(item)
+getStock(item);
 ```
 
 What this does is take the `item` object we’ve passed in, finds the `id` and `variation` properties on it and assigns the values to the two variables.
@@ -86,17 +86,17 @@ You may be confused as to why these aren’t objects, as you can call a method s
 Another term that may be unfamilliar is side effects. A function with side effects is one that uses or changes a variable outside it’s scope. Or put simply, what you pass as the function’s arguments is all it should interact with. For example:
 
 ```jsx
-console.log(item.name) // "Metal Bottle"
+console.log(item.name); // "Metal Bottle"
 
 function prepareItemForCheckout(item) {
   // Processes the item data for checkout.
-  item.name = `${item.name} (${item.variation})`
-  return
+  item.name = `${item.name} (${item.variation})`;
+  return;
 }
 
-prepareItemForCheckout(item)
+prepareItemForCheckout(item);
 
-console.log(item.name) // "Metal Bottle (red)"
+console.log(item.name); // "Metal Bottle (red)"
 ```
 
 As you can see, we’re modifying the item’s name inside the function, which affects the `item` variable in the global scope. Which could end up breaking your UI rendering logic. In `prepareItemForCheckout` I could have changed the `name` property to a `list`, and maybe somewhere else in my code, it relies on `name` to have the `.toUpper()` method.
@@ -113,7 +113,7 @@ const item = {
     amount: 15.0,
     tax: 0.15,
   },
-}
+};
 
 function computeTotalPrice({
   item: {
@@ -121,17 +121,17 @@ function computeTotalPrice({
   },
   firstTimeDiscount = false,
 }) {
-  const priceWithTax = amount * (1 + tax)
+  const priceWithTax = amount * (1 + tax);
 
   if (firstTimeDiscount) {
-    return priceWithTax * 0.9
+    return priceWithTax * 0.9;
   }
 
-  return priceWithTax
+  return priceWithTax;
 }
 
-console.log(computeTotalPrice({ item })) // 17.25
-console.log(computeTotalPrice({ item, firstTimeDiscount: true })) // 15.525
+console.log(computeTotalPrice({ item })); // 17.25
+console.log(computeTotalPrice({ item, firstTimeDiscount: true })); // 15.525
 ```
 
 Here we have a function that uses object destructuring with an optional argument, `firstTimeDiscount` set to false by default. It finds the item property on the object, and finds the `price` property on it. Finally, it declares the variables `amount` and `tax`. Note that you can’t access `item` and `price` as variables within the local scope.
@@ -140,9 +140,9 @@ I’d like to draw attention to the function call. What would it look like witho
 
 ```jsx
 // with object destructuring
-computeTotalPrice({ item, firstTimeDiscount: true })
+computeTotalPrice({ item, firstTimeDiscount: true });
 // without
-computeTotalPrice(item, true)
+computeTotalPrice(item, true);
 ```
 
 Sorry to get philosophical, but what is `true`? It’s impossible to tell how that argument is being used by the function without looking at the function definition itself. With object destructuring, the purpose is crystal clear.

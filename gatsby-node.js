@@ -1,10 +1,10 @@
-const path = require("path")
-const _ = require("lodash")
+const path = require("path");
+const _ = require("lodash");
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const tagTemplate = path.resolve("src/templates/tag.jsx")
+  const tagTemplate = path.resolve("src/templates/tag.jsx");
 
   const result = await graphql(`
     {
@@ -27,16 +27,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
     }
-  `)
+  `);
 
   // handle errors
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
   }
 
   // Extract tag data from query
-  const tags = result.data.tagsGroup.group
+  const tags = result.data.tagsGroup.group;
 
   // Make tag pages
   tags.forEach(tag => {
@@ -46,11 +46,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         tag: tag.fieldValue,
       },
-    })
-  })
+    });
+  });
 
   // Make post pages
-  const posts = result.data.tagsGroup.edges
+  const posts = result.data.tagsGroup.edges;
 
   posts.forEach(({ node }) => {
     createPage({
@@ -59,6 +59,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         id: node.id,
       },
-    })
-  })
-}
+    });
+  });
+};

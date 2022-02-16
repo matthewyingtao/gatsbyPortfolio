@@ -79,4 +79,4 @@ module.exports = {
     },
     "gatsby-plugin-robots-txt",
   ],
-}
+};

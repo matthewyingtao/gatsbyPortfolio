@@ -1,11 +1,11 @@
-import { graphql } from "gatsby"
-import * as React from "react"
-import Seo from "../components/layout/seo"
-import { ProjectCard } from "../components/projectCard"
-import { projectCardList } from "./projects.module.css"
+import { graphql } from "gatsby";
+import * as React from "react";
+import Seo from "../components/layout/seo";
+import { ProjectCard } from "../components/projectCard";
+import { projectCardList } from "./projects.module.css";
 
 export default function Projects({ data: { projects } }) {
-  console.log(projects.nodes)
+  console.log(projects.nodes);
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function Projects({ data: { projects } }) {
         ))}
       </div>
     </>
-  )
+  );
 }
 
 export const query = graphql`
@@ -38,4 +38,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

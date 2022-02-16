@@ -6,11 +6,12 @@ Inspired by [Wes Bos](https://wesbos.com/)' [uses.tech](https://uses.tech/), her
 
 ![My Visual Studio Code appearance.](./My_VSCode_appearance.png)
 
-- I use **Figma** to prototype and iterate my website and app designs, as well as to create simple SVG files (I use **Adobe Illustrator** for anything more complex). 
+- I use **Figma** to prototype and iterate my website and app designs, as well as to create simple SVG files (I use **Adobe Illustrator** for anything more complex).
 - **[Squoosh](https://squoosh.app/)** is an amazing web app I often use to compress images.
 
 ## Hardware
+
 - Laptop — ASUS Vivobook Pro 15 OLED M3500QC
 - Keyboard — Logitech G815 LIGHTSYNC
-- Mouse — Logitech G402 
+- Mouse — Logitech G402
 - Headset — HyperX Cloud Stinger Core

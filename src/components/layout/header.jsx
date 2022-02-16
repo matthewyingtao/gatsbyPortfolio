@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import { header, topRow, links, active, logo } from "./header.module.css"
-import { HueSelect } from "./hueSelect"
+import React from "react";
+import { Link } from "gatsby";
+import { header, topRow, links, active, logo } from "./header.module.css";
+import { HueSelect } from "./hueSelect";
 
 export function Header() {
   const routes = [
@@ -25,7 +25,7 @@ export function Header() {
       name: "Uses",
       to: "/uses",
     },
-  ]
+  ];
 
   return (
     <header className={header}>
@@ -47,5 +47,5 @@ export function Header() {
         <a href="#contact">Contact</a>
       </nav>
     </header>
-  )
+  );
 }

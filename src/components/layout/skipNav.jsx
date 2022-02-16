@@ -1,12 +1,12 @@
-import * as React from "react"
-import { skip } from "./skipNav.module.css"
+import * as React from "react";
+import { skip } from "./skipNav.module.css";
 
 export function SkipNavLink() {
   return (
     <a className={skip} href="#skip-to-content">
       Skip to content
     </a>
-  )
+  );
 }
 
 export function SkipNavContent({ children, ...props }) {
@@ -14,5 +14,5 @@ export function SkipNavContent({ children, ...props }) {
     <main id="skip-to-content" {...props}>
       {children}
     </main>
-  )
+  );
 }

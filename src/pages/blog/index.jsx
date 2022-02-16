@@ -1,12 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { kebabCase } from "lodash"
-import { BlogPostList } from "../../components/blogPostList"
-import Seo from "../../components/layout/seo"
-import { tags as tagsStyle } from "./blogIndex.module.css"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { kebabCase } from "lodash";
+import { BlogPostList } from "../../components/blogPostList";
+import Seo from "../../components/layout/seo";
+import { tags as tagsStyle } from "./blogIndex.module.css";
 
 export default function Blog({ data: { posts } }) {
-  const { distinct: tags } = posts
+  const { distinct: tags } = posts;
 
   return (
     <>
@@ -25,7 +25,7 @@ export default function Blog({ data: { posts } }) {
       </div>
       <BlogPostList posts={posts.edges.map(({ node }) => node)} />
     </>
-  )
+  );
 }
 
 export const query = graphql`
@@ -45,4 +45,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

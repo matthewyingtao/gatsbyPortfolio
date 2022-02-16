@@ -1,7 +1,7 @@
-import React from "react"
-import { footer, divider } from "./footer.module.css"
-import { IoLogoGithub } from "react-icons/io"
-import { Contact } from "./contact"
+import React from "react";
+import { footer, divider } from "./footer.module.css";
+import { IoLogoGithub } from "react-icons/io";
+import { Contact } from "./contact";
 
 export function Footer() {
   return (
@@ -38,7 +38,7 @@ export function Footer() {
         <IoLogoGithub size={24} /> Source Code
       </a>
     </footer>
-  )
+  );
 }
 
 function Star() {
@@ -97,7 +97,7 @@ function Star() {
         </filter>
       </defs>
     </svg>
-  )
+  );
 }
 
 function Diamond() {
@@ -117,7 +117,7 @@ function Diamond() {
         ></path>
       </g>
     </svg>
-  )
+  );
 }
 
 function Cresent() {
@@ -137,7 +137,7 @@ function Cresent() {
         ></path>
       </g>
     </svg>
-  )
+  );
 }
 
 function QuarterCircle() {
@@ -157,7 +157,7 @@ function QuarterCircle() {
         ></path>
       </g>
     </svg>
-  )
+  );
 }
 
 function Fish() {
@@ -177,5 +177,5 @@ function Fish() {
         ></path>
       </g>
     </svg>
-  )
+  );
 }

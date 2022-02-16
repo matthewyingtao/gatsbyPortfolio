@@ -1,12 +1,12 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 import {
   card,
   postData,
   date as dateStyle,
   tagsWrapper,
-} from "./blogPostCard.module.css"
-import { kebabCase } from "lodash"
+} from "./blogPostCard.module.css";
+import { kebabCase } from "lodash";
 
 export function BlogPostCard({ title, date, description, slug, tags }) {
   return (
@@ -28,7 +28,7 @@ export function BlogPostCard({ title, date, description, slug, tags }) {
         <p>{description}</p>
       </div>
     </Link>
-  )
+  );
 }
 
 export const query = graphql`
@@ -41,4 +41,4 @@ export const query = graphql`
       tags
     }
   }
-`
+`;

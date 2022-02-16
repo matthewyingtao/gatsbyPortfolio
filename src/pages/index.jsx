@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { IoIosArrowRoundForward, IoIosArrowForward } from "react-icons/io"
+import React from "react";
+import { graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { IoIosArrowRoundForward, IoIosArrowForward } from "react-icons/io";
 
-import { BlogPostList } from "../components/blogPostList"
-import Seo from "../components/layout/seo"
+import { BlogPostList } from "../components/blogPostList";
+import Seo from "../components/layout/seo";
 import {
   intro,
   portraitWrapper,
@@ -14,8 +14,8 @@ import {
   focus,
   writing,
   contactButton,
-} from "./index.module.css"
-import { ArrowLink } from "../components/arrowLink"
+} from "./index.module.css";
+import { ArrowLink } from "../components/arrowLink";
 
 function IntroSVG({ ...props }) {
   return (
@@ -96,7 +96,7 @@ function IntroSVG({ ...props }) {
         </g>
       </g>
     </svg>
-  )
+  );
 }
 
 export default function Home({ data: { posts } }) {
@@ -151,7 +151,7 @@ export default function Home({ data: { posts } }) {
         <ArrowLink to={"/blog"}>{"View all"}</ArrowLink>
       </section>
     </>
-  )
+  );
 }
 
 export const query = graphql`
@@ -171,4 +171,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

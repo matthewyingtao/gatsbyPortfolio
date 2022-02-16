@@ -1,6 +1,6 @@
-import * as React from "react"
-import { list } from "./blogPostList.module.css"
-import { BlogPostCard } from "./blogPostCard"
+import * as React from "react";
+import { list } from "./blogPostList.module.css";
+import { BlogPostCard } from "./blogPostCard";
 
 export function BlogPostList({ posts }) {
   return (
@@ -18,5 +18,5 @@ export function BlogPostList({ posts }) {
         )
       )}
     </div>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import { card, cardImage, projectInfo } from "./projectCard.module.css"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as React from "react";
+import { graphql } from "gatsby";
+import { card, cardImage, projectInfo } from "./projectCard.module.css";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export function ProjectCard({ name, description, img }) {
-  const image = getImage(img)
+  const image = getImage(img);
 
   return (
     <div className={card}>
@@ -14,7 +14,7 @@ export function ProjectCard({ name, description, img }) {
         <p>{description}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export const query = graphql`
@@ -31,4 +31,4 @@ export const query = graphql`
     name
     description
   }
-`
+`;

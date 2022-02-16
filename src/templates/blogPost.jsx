@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Seo from "../components/layout/seo"
-import "./blogPost.css"
-import { kebabCase } from "lodash"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Seo from "../components/layout/seo";
+import "./blogPost.css";
+import { kebabCase } from "lodash";
 
 export default function Home({ data }) {
   const {
@@ -10,7 +10,7 @@ export default function Home({ data }) {
       frontmatter: { title, date, description, tags, finished },
       html,
     },
-  } = data
+  } = data;
 
   return (
     <article>
@@ -37,7 +37,7 @@ export default function Home({ data }) {
         </p>
       </div>
     </article>
-  )
+  );
 }
 
 export const query = graphql`
@@ -53,4 +53,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

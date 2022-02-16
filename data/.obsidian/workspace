@@ -7,12 +7,8 @@
         "id": "d231506e99c4615d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "posts/ramdaCurryBySourceCode/index.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/ramdaCurryBySourceCode/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,13 +84,15 @@
   },
   "active": "d231506e99c4615d",
   "lastOpenFiles": [
+    "posts/replicatingCoolCSS/index.md",
+    "posts/replicatingCoolCSS/wavyText.webm",
     "posts/ramdaCurryBySourceCode/index.md",
-    "posts/objectDestructuring/index.md",
     "Post Ideas.md",
+    "posts/tailwind/index.md",
+    "posts/objectDestructuring/index.md",
     "about/index.md",
     "about/scratch.png",
     "uses/index.md",
-    "uses/My_VSCode_appearance.png",
-    "projects/environ.webp"
+    "uses/My_VSCode_appearance.png"
   ]
 }

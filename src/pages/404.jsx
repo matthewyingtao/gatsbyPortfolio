@@ -1,6 +1,6 @@
-import * as React from "react"
-import { ArrowLink } from "../components/arrowLink"
-import Seo from "../components/layout/seo"
+import * as React from "react";
+import { ArrowLink } from "../components/arrowLink";
+import Seo from "../components/layout/seo";
 
 export default function ErrorPage() {
   return (
@@ -23,5 +23,5 @@ export default function ErrorPage() {
         <ArrowLink to="/about">Find out more about me</ArrowLink>
       </div>
     </article>
-  )
+  );
 }

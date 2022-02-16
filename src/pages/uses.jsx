@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Seo from "../components/layout/seo"
+import React from "react";
+import { graphql } from "gatsby";
+import Seo from "../components/layout/seo";
 
 export default function Uses({ data }) {
   const {
     markdownRemark: { html },
-  } = data
+  } = data;
 
   return (
     <article>
@@ -20,7 +20,7 @@ export default function Uses({ data }) {
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </article>
-  )
+  );
 }
 
 export const query = graphql`
@@ -29,4 +29,4 @@ export const query = graphql`
       html
     }
   }
-`
+`;

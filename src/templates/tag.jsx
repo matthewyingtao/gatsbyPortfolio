@@ -1,20 +1,20 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { BlogPostList } from "../components/blogPostList"
+import React from "react";
+import { graphql } from "gatsby";
+import { BlogPostList } from "../components/blogPostList";
 
 export default function Tags({ pageContext, data: { posts } }) {
-  const { tag } = pageContext
-  const { totalCount } = posts
+  const { tag } = pageContext;
+  const { totalCount } = posts;
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  } tagged with "${tag}"`;
 
   return (
     <>
       <h2 style={{ marginBottom: "var(--space-xl)" }}>{tagHeader}</h2>
       <BlogPostList posts={posts.edges.map(({ node }) => node)} />
     </>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -32,4 +32,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
