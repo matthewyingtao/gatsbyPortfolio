@@ -1,18 +1,16 @@
 .card {
   background: var(--color-gradient-ltr);
-  background-size: 200%;
-  background-position: 0%;
   box-shadow: var(--shadow-neu-md);
   border-radius: var(--radius-md);
   padding: var(--space-xl);
   color: var(--dark);
-  transition: background-position 250ms ease-out, color 250ms ease-out,
+  transition: filter 250ms ease-out, color 250ms ease-out,
     transform 50ms ease-in-out;
 }
 
 .card:hover {
   color: var(--black);
-  background-position: 100%;
+  filter: hue-rotate(25deg);
 }
 
 .postData {

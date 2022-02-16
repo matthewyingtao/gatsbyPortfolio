@@ -1,5 +1,5 @@
 import React from "react"
-import { footer, divider, contact } from "./footer.module.css"
+import { footer, divider } from "./footer.module.css"
 import { IoLogoGithub } from "react-icons/io"
 import { Contact } from "./contact"
 

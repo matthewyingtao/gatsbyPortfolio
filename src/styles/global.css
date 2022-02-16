@@ -240,17 +240,15 @@ blockquote::after {
 button {
   cursor: pointer;
   background: var(--color-gradient-ltr);
-  background-position-x: 0%;
-  background-size: 200%;
   border: none;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-neu-sm);
-  transition: background-position-x 175ms ease-out;
+  transition: filter 175ms ease-out;
 }
 
 button:hover,
 button:focus {
-  background-position-x: 100%;
+  filter: hue-rotate(25deg);
 }
 
 button:active {

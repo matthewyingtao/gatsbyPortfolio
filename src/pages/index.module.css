@@ -26,8 +26,12 @@
   flex-shrink: 0;
   height: 10rem;
   width: 10rem;
-  border-radius: 999px;
   box-shadow: var(--shadow-neu-md);
+}
+
+.portrait,
+.portrait img {
+  border-radius: 999px;
 }
 
 .pointer {
@@ -68,16 +72,14 @@
   cursor: pointer;
   padding: var(--space-md) var(--space-lg);
   background: var(--color-gradient-ltr);
-  background-position-x: 0%;
-  background-size: 200%;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-neu-sm);
-  transition: background-position-x 175ms ease-out, color 150ms ease-out;
+  transition: filter 175ms ease-out, color 150ms ease-out;
 }
 
 .contactButton:hover,
 .contactButton:focus {
-  background-position-x: 100%;
+  filter: hue-rotate(25deg);
   color: var(--white);
 }
 

@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   background: var(--color-gradient-ltr);
-  background-size: 200%;
-  background-position: 0%;
   box-shadow: var(--shadow-neu-md);
   border-radius: var(--radius-md);
   padding: var(--space-xl);
@@ -20,7 +18,7 @@
 }
 
 .showing {
-  animation: headShake 500ms ease-in-out;
+  animation: headShake 500ms ease-in-out 1 forwards;
 }
 
 /* Taken from animate.css */
