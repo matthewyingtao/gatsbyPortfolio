@@ -7,8 +7,12 @@
         "id": "d231506e99c4615d",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "posts/clipboard-manager/part1.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/clipboard-manager/part1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,15 +89,15 @@
   },
   "active": "d231506e99c4615d",
   "lastOpenFiles": [
-    "posts/replicatingCoolCSS/index.md",
-    "posts/replicatingCoolCSS/wavyText.webm",
-    "posts/ramdaCurryBySourceCode/index.md",
-    "Post Ideas.md",
-    "posts/tailwind/index.md",
+    "posts/clipboard-manager/part1.md",
+    "posts/clipboard-manager/part1Progress.png",
+    "posts/clipboard-manager/discordChannels.png",
+    "posts/clipboard-manager/discordChannels.png",
+    "posts/clipboard-manager/Pasted image 20220218083252.png",
     "posts/objectDestructuring/index.md",
-    "about/index.md",
-    "about/scratch.png",
-    "uses/index.md",
-    "uses/My_VSCode_appearance.png"
+    "posts/objectDestructuring/codeSuggestion.png",
+    "Pasted image 20220218080846.png",
+    "posts/ramdaCurryBySourceCode/index.md",
+    "posts/replicatingCoolCSS/index.md"
   ]
 }
