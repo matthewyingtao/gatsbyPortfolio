@@ -29,9 +29,10 @@ export function Contact() {
     <section ref={contactEl} id="contact" className={contact}>
       <h2>Contact</h2>
       <p style={{ lineHeight: "var(--line-height-400)" }}>
-        Feel free to email me about any corrections, suggestions or questions
-        you have! You can find me at{" "}
+        You can find me at{" "}
         <a href="mailto:matthew.yingtao@gmail.com">matthew.yingtao@gmail.com</a>
+        . Feel free to email me if you have any corrections, suggestions,
+        questions or simply to say hello!
       </p>
     </section>
   );

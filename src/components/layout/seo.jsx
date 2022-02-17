@@ -16,7 +16,7 @@ const Seo = ({
   return (
     <Helmet
       htmlAttributes={{ lang: "en" }}
-      title={`${title} | Matthew Tao`}
+      title={`${title ? title + " | " : ""}Matthew Tao`}
       meta={[
         {
           name: `description`,
