@@ -10,10 +10,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-layout`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
         fonts: [`Roboto Mono\:400`, `Inter\:400,700,900`],
         display: "swap",
+        attributes: {
+          rel: "stylesheet preload prefetch",
+        },
       },
     },
     {

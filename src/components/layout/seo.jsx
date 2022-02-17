@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 const defaults = {
   title: "",
   description:
-    "Matthew tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.",
+    "Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.",
 };
 
 const keywords = ["CSS", "javascript", "front-end developer"];

@@ -16,7 +16,7 @@
   "dependencies": {
     "gatsby": "^4.6.1",
     "gatsby-plugin-canonical-urls": "^4.7.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-fonts-with-attributes": "^1.0.8",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-layout": "^3.7.0",
     "gatsby-plugin-netlify": "^4.1.0",
