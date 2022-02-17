@@ -30,6 +30,46 @@ const Seo = ({
           name: "google-site-verification",
           content: "4bVvZA3ngyZQr4cVZjcW42QoIjybeIeVGqEfcMB1Aus",
         },
+        {
+          property: "og:title",
+          content: `${title ? title + " | " : ""}Matthew Tao`,
+        },
+        {
+          property: "og:description",
+          content: description,
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://matthewtao.com",
+        },
+        {
+          property: "og:image",
+          content: "https://matthewtao.com/twitterCard.jpg",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:site",
+          content: "@MatthewTao5",
+        },
+        {
+          name: "twitter:title",
+          content: `${title ? title + " | " : ""}Matthew Tao`,
+        },
+        {
+          name: "twitter:description",
+          content: description,
+        },
+        {
+          name: "twitter:image",
+          content: "https://matthewtao.com/twitterCard.jpg",
+        },
       ]}
     />
   );
