@@ -19,10 +19,11 @@ I'm sent a link. Opening it, a quick skim tells me that it seems to be a bafflin
 
 And many more. In the past I've used a private Discord server to store it all, but it hasn't been the ideal solution for a few reasons.
 
-1. The lack of a tagging system means that either I have to create a huge number of "channels," or live with larger pages, which means I have to search a bit to find what I need.
 ![My Discord channels](./discordChannels.png)
+
+1. The lack of a tagging system means that either I have to create a huge number of "channels," or live with larger pages, which means I have to search a bit to find what I need.
 2. Again, because there's no tagging system, I can't search very easily. I'd like to be able to simply search all tagged with `CSS` and it come back with everything to do with CSS.
-3.  I have to be online to access it. This is more of a peace of mind thing, it hasn't been a problem yet, but I see myself needing to check or access my notes when I'm not home. If my internet goes out, I still want access to my stuff.
+3. I have to be online to access it. This is more of a peace of mind thing, it hasn't been a problem yet, but I see myself needing to check or access my notes when I'm not home. If my internet goes out, I still want access to my stuff.
 
 ## My Solution
 
