@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "posts/clipboard-manager/part1.md",
+            "file": "posts/clipboard-manager/part2.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/clipboard-manager/part1.md",
+                "file": "posts/clipboard-manager/part2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "d231506e99c4615d",
   "lastOpenFiles": [
+    "posts/clipboard-manager/part2.md",
+    "posts/clipboard-manager/part2Progress.png",
     "posts/clipboard-manager/part1.md",
+    "Pasted image 20220219092323.png",
     "posts/clipboard-manager/part1Progress.png",
     "posts/clipboard-manager/discordChannels.png",
     "posts/clipboard-manager/discordChannels.png",
     "posts/clipboard-manager/Pasted image 20220218083252.png",
     "posts/objectDestructuring/index.md",
-    "posts/objectDestructuring/codeSuggestion.png",
-    "Pasted image 20220218080846.png",
-    "posts/ramdaCurryBySourceCode/index.md",
-    "posts/replicatingCoolCSS/index.md"
+    "posts/objectDestructuring/codeSuggestion.png"
   ]
 }

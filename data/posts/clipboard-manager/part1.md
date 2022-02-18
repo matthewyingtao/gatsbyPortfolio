@@ -41,7 +41,7 @@ I've decided to make my own note keeping/clipboard manager desktop app. I'll be 
 
 I'll be documenting my progress though these devlogs and explain some of the decisions I make along the way.
 
-To set up the Tauri project with SvelteKit, I followed [this guide](https://medium.com/@cazanator/tauri-with-standard-svelte-or-sveltekit-ad7f103c37e7) by Dan Casler.
+To set up the Tauri project with Svelte, I followed [this guide](https://medium.com/@cazanator/tauri-with-standard-svelte-or-sveltekit-ad7f103c37e7) by Dan Casler.
 
 So far, after only around 30 minutes, I've implemented a core functionality: pasting.
 
