@@ -46,18 +46,3 @@
 .logo:hover::before {
   transform: translateX(var(--space-sm));
 }
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-left: var(--space-lg);
-}
-
-.links a {
-  text-decoration: none;
-}
-
-.active.active {
-  text-decoration: underline;
-}

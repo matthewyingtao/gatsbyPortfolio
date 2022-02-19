@@ -1,32 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
-import { header, topRow, links, active, logo } from "./header.module.css";
+import { header, topRow, logo } from "./header.module.css";
 import { HueSelect } from "./hueSelect";
+import { Nav } from "./nav";
 
 export function Header() {
-  const routes = [
-    {
-      name: "Home",
-      to: "/",
-    },
-    {
-      name: "Blog",
-      to: "/blog",
-    },
-    {
-      name: "Projects",
-      to: "/projects",
-    },
-    {
-      name: "About",
-      to: "/about",
-    },
-    {
-      name: "Uses",
-      to: "/uses",
-    },
-  ];
-
   return (
     <header className={header}>
       <div className={topRow}>
@@ -35,17 +13,7 @@ export function Header() {
         </Link>
         <HueSelect />
       </div>
-      <nav className={links}>
-        {routes.map(({ name, to }, i) => (
-          <>
-            <Link activeClassName={active} to={to}>
-              {name}
-            </Link>
-            <em>|</em>
-          </>
-        ))}
-        <a href="#contact">Contact</a>
-      </nav>
+      <Nav />
     </header>
   );
 }
