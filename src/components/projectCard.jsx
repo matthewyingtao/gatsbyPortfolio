@@ -8,7 +8,11 @@ export function ProjectCard({ name, description, img }) {
 
   return (
     <div className={card}>
-      <GatsbyImage className={cardImage} image={image} />
+      <GatsbyImage
+        className={cardImage}
+        image={image}
+        alt={`${name} showcase`}
+      />
       <div className={projectInfo}>
         <h2>{name}</h2>
         <p>{description}</p>
