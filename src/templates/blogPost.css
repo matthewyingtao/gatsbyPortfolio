@@ -43,7 +43,6 @@ pre[class*="language-"] {
   border-radius: var(--radius-sm);
 }
 
-/* scrollbar */
 pre[class*="language-"]::-webkit-scrollbar {
   height: 0.5rem;
 }
