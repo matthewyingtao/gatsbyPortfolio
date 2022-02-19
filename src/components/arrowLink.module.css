@@ -1,7 +1,13 @@
 .arrowLink {
   display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
+  width: max-content;
   align-items: center;
+}
+
+.arrowLink.left {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .arrowLink svg {
@@ -10,4 +16,8 @@
 
 .arrowLink:hover svg {
   transform: translateX(var(--space-sm));
+}
+
+.arrowLink.left:hover svg {
+  transform: translateX(calc(var(--space-sm) * -1));
 }
