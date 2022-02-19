@@ -46,8 +46,6 @@ export const Nav = () => {
           const scrollClass =
             entry.target === firstLink ? canScrollLeft : canScrollRight;
 
-          console.log(scrollClass);
-
           if (entry.intersectionRatio != 1) {
             if (!wrapperEl.current.classList.contains(scrollClass)) {
               wrapperEl.current.classList.add(scrollClass);
