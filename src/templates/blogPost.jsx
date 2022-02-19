@@ -7,7 +7,7 @@ import { kebabCase } from "lodash";
 export default function Home({ data }) {
   const {
     markdownRemark: {
-      frontmatter: { title, date, description, tags, finished },
+      frontmatter: { title, date, description, tags },
       html,
     },
   } = data;
@@ -17,9 +17,6 @@ export default function Home({ data }) {
       <Seo title={title} description={description} />
       <h1 className="title">{title}</h1>
       <div className="blogContent">
-        {!finished && (
-          <p className="blogStatus">⚠️This post is a work in progress!⚠️</p>
-        )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <p style={{ marginTop: "var(--space-xl)" }}>
           Written on{" "}
@@ -49,7 +46,6 @@ export const query = graphql`
         description
         title
         tags
-        finished
       }
     }
   }
