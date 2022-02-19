@@ -6,7 +6,9 @@ import Seo from "../../components/layout/seo";
 import { tags as tagsStyle } from "./blogIndex.module.css";
 
 export default function Blog({ data: { posts } }) {
-  const { distinct: tags } = posts;
+  const { group: tags } = posts;
+
+  const sortedTags = tags.sort((a, b) => b.totalCount - a.totalCount);
 
   return (
     <>
@@ -17,10 +19,15 @@ export default function Blog({ data: { posts } }) {
       <h1 className="title">
         Blog<em>.</em>
       </h1>
-      <p>Sort by tag</p>
+
       <div className={tagsStyle}>
-        {tags.map(tag => (
-          <Link to={`/blog/tag/${kebabCase(tag)}`}>#{tag}</Link>
+        <span>Filter by tag:</span>
+        {sortedTags.map(({ fieldValue: tag, totalCount }) => (
+          <Link to={`/blog/tag/${kebabCase(tag)}`}>
+            <small>
+              #{tag} ({totalCount})
+            </small>
+          </Link>
         ))}
       </div>
       <BlogPostList posts={posts.edges.map(({ node }) => node)} />
@@ -37,11 +44,14 @@ export const query = graphql`
         frontmatter: { finished: { eq: true } }
       }
     ) {
-      distinct(field: frontmatter___tags)
       edges {
         node {
           ...BlogPostCard
         }
+      }
+      group(field: frontmatter___tags) {
+        totalCount
+        fieldValue
       }
     }
   }
