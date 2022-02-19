@@ -1,20 +1,20 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  box-shadow: var(--shadow-neu-md);
 }
 
 .cardImage {
   aspect-ratio: 1;
   flex-shrink: 0;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-neu-md);
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
 }
 
 .projectInfo {
   background: var(--color-gradient-ltr);
-  box-shadow: var(--shadow-neu-md);
-  border-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
   padding: var(--space-xl);
   color: var(--dark);
   width: 100%;
@@ -23,6 +23,9 @@
 @media screen and (min-width: 30rem) {
   .card {
     flex-direction: row;
+    gap: var(--space-xl);
+    box-shadow: none;
+    border-radius: unset;
   }
 
   .card:nth-of-type(2n) {
@@ -31,5 +34,12 @@
 
   .cardImage {
     height: 12rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-neu-md);
+  }
+
+  .projectInfo {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-neu-md);
   }
 }
