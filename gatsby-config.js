@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     siteUrl: `https://www.matthewtao.com`,
   },
@@ -66,6 +67,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     // Build and SEO optimizations
+    `gatsby-plugin-minify`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-remove-fingerprints`,
     {
