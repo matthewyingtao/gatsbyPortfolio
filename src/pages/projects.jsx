@@ -5,8 +5,6 @@ import { ProjectCard } from "../components/projectCard";
 import { projectCardList } from "./projects.module.css";
 
 export default function Projects({ data: { projects } }) {
-  console.log(projects.nodes);
-
   return (
     <>
       <Seo
