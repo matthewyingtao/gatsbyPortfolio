@@ -18,9 +18,15 @@ export default function ErrorPage() {
           alignItems: "flex-start",
         }}
       >
-        <ArrowLink to="/">Go home</ArrowLink>
-        <ArrowLink to="/blog">Read my blog posts</ArrowLink>
-        <ArrowLink to="/about">Find out more about me</ArrowLink>
+        <ArrowLink directionRight={false} to="/">
+          Go home
+        </ArrowLink>
+        <ArrowLink directionRight={false} to="/blog">
+          Read my blog posts
+        </ArrowLink>
+        <ArrowLink directionRight={false} to="/about">
+          Find out more about me
+        </ArrowLink>
       </div>
     </article>
   );
