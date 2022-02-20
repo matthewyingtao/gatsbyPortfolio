@@ -31,6 +31,10 @@ const Seo = ({
           content: "4bVvZA3ngyZQr4cVZjcW42QoIjybeIeVGqEfcMB1Aus",
         },
         {
+          name: "google-site-verification",
+          content: "jLlPU6ex9KCAHyincJQywQffYI_12eq3GwjK1D7bCWw",
+        },
+        {
           property: "og:title",
           content: `${title ? title + " | " : ""}Matthew Tao`,
         },
