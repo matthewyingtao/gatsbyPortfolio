@@ -9,12 +9,18 @@ export default function Uses({ data }) {
 
   return (
     <article>
-      <Seo />
+      <Seo
+        title="About"
+        description="Aspiring web developer. Find out a little more about me and what I do."
+      />
       <h1 className="title">
         About Me<em>.</em>
       </h1>
-      <div className="blogContent">
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div>
+        <div
+          className="blogContent"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </article>
   );

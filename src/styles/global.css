@@ -45,24 +45,24 @@
   --line-height-200: 1;
   --line-height-300: 1.25;
   --line-height-400: 1.5;
-  --line-height-500: 1.65;
+  --line-height-500: 1.7;
 
   --sans: "Inter", sans-serif;
   --mono: "Roboto Mono", monospace;
 
   --text-300: clamp(0.8rem, 0.3vw + 0.73rem, 0.94rem);
-  --text-400: clamp(1rem, 0.54vw + 0.86rem, 1.25rem);
+  --text-400: clamp(1.125rem, 0.8rem + 0.81vw, 1.38rem);
   --text-500: clamp(1.25rem, 0.9vw + 1.02rem, 1.67rem);
-  --text-600: clamp(1.56rem, 1.42vw + 1.21rem, 2.22rem);
-  --text-700: clamp(1.95rem, 2.18vw + 1.41rem, 2.96rem);
-  --text-800: clamp(2.44rem, 4.52vw + 1.31rem, 4.53rem);
-  --text-900: clamp(3.05rem, 6.93vw + 1.32rem, 6.26rem);
+  --text-600: clamp(1.56rem, 1.42vw + 1.21rem, 2.25rem);
+  --text-700: clamp(1.95rem, 2.18vw + 1.41rem, 2.75rem);
+  --text-800: clamp(2.44rem, 4.52vw + 1.3rem, 4rem);
+  --text-900: clamp(3.05rem, 6.93vw + 1.3rem, 6.26rem);
   /*---
   Other
   ---*/
 
-  --max-content-width: 50rem;
-  --max-text-width: 45rem;
+  --max-content-width: 53rem;
+  --max-text-width: 48rem;
 
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
@@ -118,6 +118,11 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--black);
 }
 
+:focus-visible {
+  outline: var(--space-sm) solid var(--primary);
+  outline-offset: var(--space-sm);
+}
+
 body {
   background-color: var(--dark);
   color: var(--text);
@@ -151,10 +156,6 @@ h4 {
   margin-bottom: 0.5em;
 }
 
-:is(p, ul, ol) + :is(h1, h2, h3, h4, h5, h6, p) {
-  margin-top: 0.5em;
-}
-
 a {
   color: var(--text);
   transition: color 150ms ease-out;
@@ -164,10 +165,8 @@ a:hover {
   color: var(--primary);
 }
 
-ul,
-ol {
-  line-height: var(--line-height-400);
-  margin-block: 0.5em;
+li + li {
+  margin-top: 0.5rem;
 }
 
 pre {
@@ -313,6 +312,10 @@ utility
   margin-bottom: var(--space-xl);
 }
 
+.blogContent > * {
+  margin-bottom: 1.7rem;
+}
+
 .blogContent :is(h1, h2, h3, h4, h5, h6, p, ol, ul) {
   max-width: var(--max-text-width);
   margin-inline: auto;
@@ -323,7 +326,14 @@ utility
   box-shadow: var(--shadow-neu-md);
   border: var(--primary) 1px solid;
   border-radius: var(--radius-sm);
-  overflow: hidden;
+}
+
+.gatsby-resp-image-link {
+  border-radius: var(--radius-sm);
+}
+
+.gatsby-resp-image-link img {
+  border-radius: var(--radius-sm);
 }
 
 .gatsby-resp-image-figcaption {

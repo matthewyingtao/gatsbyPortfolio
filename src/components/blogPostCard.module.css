@@ -1,4 +1,5 @@
 .card {
+  display: block;
   background: var(--color-gradient-ltr);
   box-shadow: var(--shadow-neu-md);
   border-radius: var(--radius-md);

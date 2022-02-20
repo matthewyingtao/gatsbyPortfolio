@@ -16,8 +16,11 @@ export default function Uses({ data }) {
       <h1 className="title">
         <em>/</em>Uses
       </h1>
-      <div className="blogContent">
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div>
+        <div
+          className="blogContent"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </article>
   );

@@ -1,6 +1,6 @@
 /* prism styles */
 .gatsby-highlight {
-  padding-block: var(--space-xl);
+  padding-block: var(--space-lg);
 }
 
 .gatsby-highlight + .gatsby-highlight {

@@ -1,6 +1,8 @@
 ## Who I am
 
-Hello! I'm Matthew Tao, an aspiring front-end developer who's currently studying Computer Science at the University of Auckland. My first encounter with code was at the age of thirteen, where I signed up for a coding club at my school. We were taught the fundamentals of programming with a programming language called Scratch.
+Hello! I'm Matthew Tao, an aspiring front-end developer who's currently studying Computer Science at the University of Auckland.
+
+My first encounter with code was at the age of thirteen, where I signed up for a coding club at my school. We were taught the fundamentals of programming with a programming language called Scratch.
 
 I liked the idea of creating something completely original, being able to translate an idea into something more concrete and started to code in my free time as a hobby. This is when I wrote (more like drag and dropped) the **_worst_** code in my life.
 

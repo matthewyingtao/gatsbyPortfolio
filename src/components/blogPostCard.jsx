@@ -10,23 +10,25 @@ import { kebabCase } from "lodash";
 
 export function BlogPostCard({ title, date, description, slug, tags }) {
   return (
-    <Link style={{ textDecoration: "none" }} to={`/blog/post/${slug}`}>
-      <div className={card}>
-        <div className={postData}>
-          <time className={dateStyle} dateTime={date}>
-            {date}
-          </time>{" "}
-          <div className={tagsWrapper}>
-            {tags.map(tag => (
-              <>
-                <Link to={`/blog/tag/${kebabCase(tag)}`}>#{tag}</Link>{" "}
-              </>
-            ))}
-          </div>
+    <Link
+      className={card}
+      style={{ textDecoration: "none" }}
+      to={`/blog/post/${slug}`}
+    >
+      <div className={postData}>
+        <time className={dateStyle} dateTime={date}>
+          {date}
+        </time>{" "}
+        <div className={tagsWrapper}>
+          {tags.map(tag => (
+            <>
+              <Link to={`/blog/tag/${kebabCase(tag)}`}>#{tag}</Link>{" "}
+            </>
+          ))}
         </div>
-        <h2>{title}</h2>
-        <p>{description}</p>
       </div>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </Link>
   );
 }
