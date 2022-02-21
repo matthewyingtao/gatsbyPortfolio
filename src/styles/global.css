@@ -51,7 +51,7 @@
   --mono: "Roboto Mono", monospace;
 
   --text-300: clamp(0.8rem, 0.3vw + 0.73rem, 0.94rem);
-  --text-400: clamp(1.125rem, 0.8rem + 0.81vw, 1.38rem);
+  --text-400: clamp(1.125rem, 0.8rem + 0.81vw, 1.25rem);
   --text-500: clamp(1.25rem, 0.9vw + 1.02rem, 1.67rem);
   --text-600: clamp(1.56rem, 1.42vw + 1.21rem, 2.25rem);
   --text-700: clamp(1.95rem, 2.18vw + 1.41rem, 2.75rem);

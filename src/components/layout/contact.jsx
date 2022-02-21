@@ -28,11 +28,18 @@ export function Contact() {
   return (
     <section ref={contactEl} id="contact" className={contact}>
       <h2>Contact</h2>
-      <p style={{ lineHeight: "var(--line-height-400)" }}>
+      <p>
         You can find me at{" "}
         <a href="mailto:matthew.yingtao@gmail.com">matthew.yingtao@gmail.com</a>
         . Feel free to email me if you have any corrections, suggestions,
-        questions or simply to say hello!
+        questions or simply to say hello! Another way to reach me is through{" "}
+        <a
+          href="https://www.linkedin.com/in/matthew-tao-727wysi/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          my LinkedIn profile
+        </a>
       </p>
     </section>
   );

@@ -3,4 +3,5 @@
   flex-wrap: wrap;
   margin-bottom: var(--space-xl);
   column-gap: var(--space-lg);
+  row-gap: var(--space-sm);
 }

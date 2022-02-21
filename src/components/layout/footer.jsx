@@ -27,7 +27,7 @@ export function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <IoLogoGithub size={24} /> Source Code
+        <IoLogoGithub size={24} /> Check out the source code on GitHub
       </a>
     </footer>
   );
