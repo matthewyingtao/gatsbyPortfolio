@@ -7,7 +7,12 @@ const defaults = {
     "Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.",
 };
 
-const keywords = ["CSS", "javascript", "front-end developer"];
+const keywords = [
+  "CSS",
+  "javascript",
+  "front-end developer",
+  "portfolio website",
+];
 
 const Seo = ({
   title = defaults.title,

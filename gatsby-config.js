@@ -67,15 +67,16 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     // Build and SEO optimizations
-    `gatsby-plugin-minify`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-remove-fingerprints`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-canonical-urls`,
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
         siteUrl: `https://www.matthewtao.com`,
       },
     },
+    `gatsby-plugin-minify`,
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-remove-fingerprints`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
