@@ -40,6 +40,7 @@ export function Contact() {
         >
           my LinkedIn profile
         </a>
+        .
       </p>
     </section>
   );

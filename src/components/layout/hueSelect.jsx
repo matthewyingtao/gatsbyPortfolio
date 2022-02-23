@@ -8,6 +8,15 @@ import {
   colorButton as colorButtonStyle,
 } from "./hueSelect.module.css";
 
+const ColorButton = ({ name, hue, i, onClick }) => (
+  <button
+    className={colorButtonStyle}
+    style={{ "--btnHue": hue, "--idx": i }}
+    onClick={onClick}
+    aria-label={name}
+  />
+);
+
 export function HueSelect() {
   const defaultHue = 213;
 
@@ -37,23 +46,12 @@ export function HueSelect() {
   const [hue, setHue] = React.useState(defaultHue);
   const [open, setOpen] = React.useState(false);
 
-  const ColorButton = ({ name, hue, i }) => (
-    <button
-      className={colorButtonStyle}
-      style={{ "--btnHue": hue, "--idx": i }}
-      onClick={() => {
-        setOpen(false);
-        setHue(hue);
-      }}
-      aria-label={name}
-    />
-  );
-
   React.useEffect(() => {
     const storedHue = localStorage.getItem("hue", hue);
     if (storedHue !== null) {
       setHue(storedHue);
     }
+    // disabled because it should only run on page load
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -72,8 +70,17 @@ export function HueSelect() {
         <IoMdColorPalette />
       </button>
       <div className={[picker, open ? openstyle : ""].join(" ")}>
-        {colors.map(({ name, hue: colorHue }, i) => (
-          <ColorButton key={name} hue={colorHue} name={name} i={i} />
+        {colors.map(({ name, hue: buttonHue }, i) => (
+          <ColorButton
+            key={name}
+            hue={buttonHue}
+            name={name}
+            i={i}
+            onClick={() => {
+              setOpen(false);
+              setHue(buttonHue);
+            }}
+          />
         ))}
       </div>
     </div>

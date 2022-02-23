@@ -83,6 +83,14 @@
   color: var(--white);
 }
 
+.contactButton svg {
+  transition: transform 150ms var(--curve-bounce);
+}
+
+.contactButton:hover svg {
+  transform: translateX(var(--space-sm));
+}
+
 .contactButton:active {
   box-shadow: var(--shadow-button);
 }

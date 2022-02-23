@@ -72,10 +72,10 @@
 
   --gutter: var(--space-lg);
 
-  --shadow-neu-sm: 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 17%),
-    -0.25rem -0.25rem 0.5rem hsl(var(--hue), 55%, 33%);
-  --shadow-neu-md: 0.5rem 0.5rem 1.5rem hsl(var(--hue), 55%, 17%),
-    -0.5rem -0.5rem 1.5rem hsl(var(--hue), 55%, 33%);
+  --shadow-neu-sm: 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 20%),
+    -0.25rem -0.25rem 0.5rem hsl(var(--hue), 55%, 35%);
+  --shadow-neu-md: 0.5rem 0.5rem 1.5rem hsl(var(--hue), 55%, 20%),
+    -0.5rem -0.5rem 1.5rem hsl(var(--hue), 55%, 35%);
 
   --shadow-neu-sm-invert: inset -0.125rem -0.125rem 0.25rem
       hsl(var(--hue), 55%, 30%),
@@ -84,13 +84,11 @@
       hsl(var(--hue), 55%, 30%),
     inset 0.25rem 0.25rem 0.5rem hsl(var(--hue), 55%, 20%);
 
-  --shadow-button: inset -0.25rem -0.25rem 0.5rem
-      hsl(calc(var(--hue) + 15), 90%, 85%),
-    inset 0.25rem 0.25rem 0.5rem hsl(calc(var(--hue) + 25), 90%, 70%);
+  --shadow-button: inset 0.25rem 0.25rem 0.5rem hsl(var(--hue), 90%, 65%),
+    inset -0.25rem -0.25rem 0.5rem hsl(calc(var(--hue) + 25), 90%, 85%);
 
-  --shadow-button-lg: inset -0.5rem -0.5rem 1rem
-      hsl(calc(var(--hue) + 15), 90%, 85%),
-    inset 0.5rem 0.5rem 1rem hsl(calc(var(--hue) + 25), 90%, 70%);
+  --shadow-button-lg: inset 0.5rem 0.5rem 1rem hsl(var(--hue), 90%, 65%),
+    inset -0.5rem -0.5rem 1rem hsl(calc(var(--hue) + 25), 90%, 85%);
 }
 
 /* scrollbar */

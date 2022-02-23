@@ -14,14 +14,14 @@
   filter: hue-rotate(25deg);
 }
 
-.postData {
-  display: flex;
-  justify-content: space-between;
-}
-
 .card:active {
   box-shadow: var(--shadow-button-lg);
   transform: translateY(var(--space-sm));
+}
+
+.postData {
+  display: flex;
+  justify-content: space-between;
 }
 
 .date {

@@ -116,11 +116,15 @@ export default function Home({ data: { posts } }) {
         </div>
         <div className={blurb}>
           <h1 style={{ lineHeight: 0.7 }}>Hi!</h1>
-          <h2 style={{ marginBottom: "0.25rem" }}>
+          <h2 style={{ marginBottom: "0.75rem" }}>
             I'm an Auckland-based <em>front-end</em> developer
           </h2>
           <p className={focus}>who focuses on</p>
-          <ul style={{ marginTop: "-0.5rem" }}>
+          <ul
+            style={{
+              lineHeight: "var(--line-height-300)",
+            }}
+          >
             <li>
               <IoIosArrowForward />
               <span>The value of soft skills</span>
