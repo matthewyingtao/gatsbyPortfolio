@@ -39,9 +39,9 @@
   Typography
   --------*/
 
-  --line-height-100: 0.9;
-  --line-height-200: 1;
-  --line-height-300: 1.25;
+  --line-height-100: 1;
+  --line-height-200: 1.2;
+  --line-height-300: 1.4;
   --line-height-400: 1.5;
   --line-height-500: 1.7;
 
