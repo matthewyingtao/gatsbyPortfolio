@@ -5,6 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const tagTemplate = path.resolve("src/templates/tag.jsx");
+  const postTemplate = path.resolve(`./src/templates/blogPost.jsx`);
 
   const result = await graphql(`
     {
@@ -55,7 +56,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   posts.forEach(({ node }) => {
     createPage({
       path: `/blog/post/${node.frontmatter.slug}`,
-      component: path.resolve(`./src/templates/blogPost.jsx`),
+      component: postTemplate,
       context: {
         id: node.id,
       },
