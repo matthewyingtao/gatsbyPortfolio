@@ -35,8 +35,6 @@
     hsl(calc(var(--hue) + 25), 90%, 80%)
   );
 
-  --text: var(--white);
-
   /*--------
   Typography
   --------*/
@@ -123,7 +121,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 body {
   background-color: var(--dark);
-  color: var(--text);
+  color: var(--white);
   font-family: var(--sans);
   font-size: var(--text-400);
   line-height: var(--line-height-500);
@@ -324,6 +322,7 @@ utility
   box-shadow: var(--shadow-neu-md);
   border: var(--primary) 1px solid;
   border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
 .gatsby-resp-image-link {
