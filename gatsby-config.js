@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
-        fonts: [`Roboto Mono\:400`, `Inter\:400,700,900`],
+        fonts: [`Roboto Mono\:400`, `Manrope\:400,600,800`],
         display: "swap",
         attributes: {
           rel: "stylesheet preload prefetch",

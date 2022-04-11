@@ -39,13 +39,12 @@
   Typography
   --------*/
 
-  --line-height-100: 1;
-  --line-height-200: 1.2;
+  --line-height-200: 1.1;
   --line-height-300: 1.4;
   --line-height-400: 1.5;
   --line-height-500: 1.7;
 
-  --sans: "Inter", sans-serif;
+  --sans: "Manrope", sans-serif;
   --mono: "Roboto Mono", monospace;
 
   --text-300: clamp(0.8rem, 0.3vw + 0.73rem, 0.94rem);
@@ -129,24 +128,27 @@ body {
 
 h1 {
   font-size: var(--text-800);
-  font-weight: 900;
-  line-height: var(--line-height-100);
+  font-weight: 800;
+  line-height: var(--line-height-200);
   margin-bottom: 0.5em;
 }
 
 h2 {
+  font-weight: 600;
   font-size: var(--text-700);
   line-height: var(--line-height-200);
   margin-bottom: 0.5em;
 }
 
 h3 {
+  font-weight: 600;
   font-size: var(--text-600);
   line-height: var(--line-height-300);
   margin-bottom: 0.5em;
 }
 
 h4 {
+  font-weight: 600;
   font-size: var(--text-500);
   line-height: var(--line-height-400);
   margin-bottom: 0.5em;

@@ -116,7 +116,7 @@ export default function Home({ data: { posts } }) {
         </div>
         <div className={blurb}>
           <h1 style={{ lineHeight: 0.7 }}>Hi!</h1>
-          <h2 style={{ marginBottom: "0.75rem" }}>
+          <h2 style={{ marginBottom: "0.5rem", maxWidth: "21ch" }}>
             I'm an Auckland-based <em>front-end</em> developer
           </h2>
           <p className={focus}>who focuses on</p>
