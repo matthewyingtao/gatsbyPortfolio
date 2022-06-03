@@ -1,7 +1,7 @@
 import React from "react";
-import { footer } from "./footer.module.css";
 import { IoLogoGithub } from "react-icons/io";
 import { Contact } from "./contact";
+import { footer } from "./footer.module.css";
 
 export function Footer() {
   return (

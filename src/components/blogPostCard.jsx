@@ -1,12 +1,12 @@
+import { graphql, Link } from "gatsby";
+import { kebabCase } from "lodash";
 import * as React from "react";
-import { Link, graphql } from "gatsby";
 import {
   card,
-  postData,
   date as dateStyle,
+  postData,
   tagsWrapper,
 } from "./blogPostCard.module.css";
-import { kebabCase } from "lodash";
 
 export function BlogPostCard({ title, date, description, slug, tags }) {
   return (

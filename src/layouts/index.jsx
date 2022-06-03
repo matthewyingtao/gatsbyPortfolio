@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "../components/layout/header";
 import { Footer } from "../components/layout/footer";
-import { pageWrapper, contentGrid, main } from "./layout.module.css";
+import { Header } from "../components/layout/header";
+import { SkipNavContent, SkipNavLink } from "../components/layout/skipNav";
 import "../styles/global.css";
 import "../styles/reset.css";
-import { SkipNavContent, SkipNavLink } from "../components/layout/skipNav";
+import { contentGrid, main, pageWrapper } from "./layout.module.css";
 
 export default function Layout({ children }) {
   return (

@@ -1,5 +1,5 @@
-import * as React from "react";
 import { graphql } from "gatsby";
+import * as React from "react";
 import Seo from "../components/layout/seo";
 
 export default function Uses({ data }) {

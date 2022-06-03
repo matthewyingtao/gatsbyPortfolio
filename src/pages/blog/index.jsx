@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { kebabCase } from "lodash";
+import React from "react";
 import { BlogPostList } from "../../components/blogPostList";
 import Seo from "../../components/layout/seo";
 import { tags as tagsStyle } from "./blogIndex.module.css";

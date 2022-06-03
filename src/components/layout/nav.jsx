@@ -1,11 +1,11 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 import {
-  linkWrapper,
-  canScrollRight,
-  canScrollLeft,
-  links,
   active,
+  canScrollLeft,
+  canScrollRight,
+  links,
+  linkWrapper,
 } from "./nav.module.css";
 
 const routes = [

@@ -1,6 +1,6 @@
-import * as React from "react";
 import { Link } from "gatsby";
-import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+import * as React from "react";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { arrowLink as arrowLinkStyle, left } from "./arrowLink.module.css";
 
 export function ArrowLink({ to, children, directionRight = true, ...props }) {

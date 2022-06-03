@@ -1,8 +1,8 @@
+import { graphql, Link } from "gatsby";
+import { kebabCase } from "lodash";
 import React from "react";
-import { Link, graphql } from "gatsby";
 import Seo from "../components/layout/seo";
 import "./blogPost.css";
-import { kebabCase } from "lodash";
 
 export default function Home({ data }) {
   const {

@@ -1,7 +1,7 @@
-import React from "react";
 import { graphql } from "gatsby";
-import { BlogPostList } from "../components/blogPostList";
+import React from "react";
 import { ArrowLink } from "../components/arrowLink";
+import { BlogPostList } from "../components/blogPostList";
 
 export default function Tags({ pageContext, data: { posts } }) {
   const { tag } = pageContext;

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { list } from "./blogPostList.module.css";
 import { BlogPostCard } from "./blogPostCard";
+import { list } from "./blogPostList.module.css";
 
 export function BlogPostList({ posts }) {
   return (

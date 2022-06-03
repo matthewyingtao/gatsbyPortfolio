@@ -1,7 +1,7 @@
-import * as React from "react";
 import { graphql } from "gatsby";
-import { card, cardImage, projectInfo } from "./projectCard.module.css";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as React from "react";
+import { card, cardImage, projectInfo } from "./projectCard.module.css";
 
 export function ProjectCard({ name, description, img }) {
   const image = getImage(img);

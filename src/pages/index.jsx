@@ -1,21 +1,20 @@
-import React from "react";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { IoIosArrowRoundForward, IoIosArrowForward } from "react-icons/io";
-
+import React from "react";
+import { IoIosArrowForward, IoIosArrowRoundForward } from "react-icons/io";
+import { ArrowLink } from "../components/arrowLink";
 import { BlogPostList } from "../components/blogPostList";
 import Seo from "../components/layout/seo";
 import {
-  intro,
-  portraitWrapper,
-  portrait,
-  pointer,
   blurb,
-  focus,
-  writing,
   contactButton,
+  focus,
+  intro,
+  pointer,
+  portrait,
+  portraitWrapper,
+  writing,
 } from "./index.module.css";
-import { ArrowLink } from "../components/arrowLink";
 
 function IntroSVG({ ...props }) {
   return (

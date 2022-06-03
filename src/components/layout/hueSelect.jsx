@@ -1,11 +1,11 @@
 import React from "react";
 import { IoMdColorPalette } from "react-icons/io";
 import {
+  colorButton as colorButtonStyle,
   dropdownWrapper,
+  open as openstyle,
   openbutton,
   picker,
-  open as openstyle,
-  colorButton as colorButtonStyle,
 } from "./hueSelect.module.css";
 
 const ColorButton = ({ name, hue, i, onClick }) => (
