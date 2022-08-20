@@ -9,17 +9,15 @@ finished: true
 
 ## Introduction
 
-I'm sent a link. Opening it, a quick skim tells me that it seems to be a bafflingly [comprehensive listing of all Yo Mama](https://github.com/joshbuchea/yo-mama) jokes ever made. (Seriously! There are over 800 of them!) "I don't have a need for this," I say to myself, "but I might need it later." For me, this is quite a common experience — not being sent a list of Yo Mama jokes, but wanting to save a link or idea for later. But it's not only links that I want to save, it's:
+It's quite common for me to want to save a link or idea for later. Common things I want to save are:
 
 - Images that I want to save for later.
 - Snippets of code that I frequently use and forget.
 - Thoughts I have at 11pm at night which I need to write down or else my brain won't let me sleep.
 - Books I want to read at some point.
-- Crappy jokes I think of in the shower.
+- Awful jokes I think of in the shower.
 
 And many more. In the past I've used a private Discord server to store it all, but it hasn't been the ideal solution for a few reasons.
-
-![My Discord channels](./discordChannels.png)
 
 1. The lack of a tagging system means that either I have to create a huge number of "channels," or live with larger pages, which means I have to search a bit to find what I need.
 2. Again, because there's no tagging system, I can't search very easily. I'd like to be able to simply search all tagged with `CSS` and it come back with everything to do with CSS.
